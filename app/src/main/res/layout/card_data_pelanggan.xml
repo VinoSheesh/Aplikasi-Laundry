@@ -4,57 +4,65 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="24dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="16dp"
         app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
-        
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="12dp">
-            
+
             <TextView
                 android:id="@+id/tv1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:text="ID Pelanggan"
-                android:textSize="14sp"
-                android:layout_marginBottom="8dp"/>
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_semibold"/>
 
             <TextView
                 android:id="@+id/tv2"
-                android:layout_below="@id/tv1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/tv1"
+                android:fontFamily="@font/poppins"
                 android:text="Nama Pelanggan"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tv3"
-                android:layout_below="@id/tv2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/tv2"
+                android:fontFamily="@font/poppins"
                 android:text="Alamat"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tv4"
-                android:layout_below="@id/tv3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/tv3"
+                android:fontFamily="@font/poppins"
                 android:text="No HP"
-                android:textSize="18sp" />
+                android:textSize="18sp"/>
 
             <LinearLayout
-                android:layout_below="@id/tv4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="end">
+                android:layout_below="@id/tv4"
+                android:gravity="end"
+                android:orientation="horizontal">
 
                 <Button
                     android:layout_width="0dp"
@@ -62,8 +70,11 @@
                     android:layout_marginStart="5dp"
                     android:layout_marginEnd="5dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#4CAF50"
-                    android:text="Hubungi" />
+                    android:backgroundTint="#302727"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Hubungi"
+                    android:textSize="14dp"
+                    tools:ignore="TextSizeCheck" />
 
                 <Button
                     android:layout_width="0dp"
@@ -71,8 +82,12 @@
                     android:layout_marginStart="5dp"
                     android:layout_marginEnd="5dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#FFEB3B"
-                    android:text="Lihat" />
+                    android:backgroundTint="#FFBC13"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Lihat"
+                    android:textColor="#302727"
+                    android:textSize="14dp"
+                    tools:ignore="TextSizeCheck" />
             </LinearLayout>
 
         </RelativeLayout>

@@ -14,10 +14,11 @@
       android:layout_height="wrap_content"
       android:layout_marginTop="36dp"
       android:text="Tambah Pelanggan"
-      android:textSize="30sp"
+      android:textSize="36sp"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+      app:layout_constraintTop_toTopOf="parent"
+      android:fontFamily="@font/poppins_semibold"/>
 
   <RelativeLayout
       android:layout_width="0dp"
@@ -27,7 +28,7 @@
       app:layout_constraintHorizontal_bias="1.0"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/textView4"
-      android:layout_margin="18dp">
+      android:layout_margin="12dp">
 
     <TextView
         android:id="@+id/textViewNama"
@@ -37,7 +38,8 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="16dp"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"/>
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/poppins"/>
 
     <EditText
         android:id="@+id/editTextNama"
@@ -48,18 +50,21 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:hint="Nama Lengkap"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:fontFamily="@font/poppins"
+        android:drawableStart="@drawable/baseline_person_24"
+        android:drawablePadding="4dp"/>
 
     <TextView
         android:id="@+id/textViewAlamat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Alamat"
         android:layout_below="@id/editTextNama"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="16dp"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"/>
+        android:layout_marginTop="16dp"
+        android:text="Alamat"
+        android:fontFamily="@font/poppins"/>
 
     <EditText
         android:id="@+id/editTextAlamat"
@@ -70,7 +75,10 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:hint="Alamat"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:fontFamily="@font/poppins"
+        android:drawableStart="@drawable/baseline_location_on_24"
+        android:drawablePadding="4dp"/>
 
     <TextView
         android:id="@+id/textViewNoHP"
@@ -81,7 +89,8 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="16dp"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"/>
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/poppins"/>
 
     <EditText
         android:id="@+id/editTextNoHP"
@@ -91,21 +100,26 @@
         android:layout_marginTop="8dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:hint="No HP"
+        android:hint="Nomor"
         android:inputType="phone"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:fontFamily="@font/poppins"
+        android:drawableStart="@drawable/baseline_local_phone_24"
+        android:drawablePadding="4dp"/>
 
     <Button
         android:id="@+id/buttonSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Simpan"
-        android:textSize="20sp"
         android:layout_below="@id/editTextNoHP"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"/>
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#302727"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Simpan"
+        android:textSize="20sp" />
 
   </RelativeLayout>
 
