@@ -5,13 +5,13 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".pelanggan.DataPelangganActivity">
-    
+    tools:context=".layanan.Activity_data_pegawai">
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvDATA_PELANGGAN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:listitem="@layout/card_data_pelanggan"
+        tools:listitem="@layout/card_data_pegawai"
         tools:ignore="MissingConstraints">
 
     </androidx.recyclerview.widget.RecyclerView>
@@ -32,7 +32,5 @@
             android:src="@drawable/baseline_add_24"
             tools:ignore="SpeakableTextPresentCheck" />
     </RelativeLayout>
-   
-    
-    
+
 </androidx.constraintlayout.widget.ConstraintLayout>
