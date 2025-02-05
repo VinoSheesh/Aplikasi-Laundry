@@ -31,7 +31,7 @@
       android:layout_margin="12dp">
 
     <TextView
-        android:id="@+id/textViewNama"
+        android:id="@+id/tvNAMA_LENGKAP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nama Lengkap"
@@ -42,10 +42,10 @@
         android:fontFamily="@font/poppins"/>
 
     <EditText
-        android:id="@+id/editTextNama"
+        android:id="@+id/etNAMA_LENGKAP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textViewNama"
+        android:layout_below="@id/tvNAMA_LENGKAP"
         android:layout_marginTop="8dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
@@ -56,10 +56,10 @@
         android:drawablePadding="4dp"/>
 
     <TextView
-        android:id="@+id/textViewAlamat"
+        android:id="@+id/tvALAMAT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextNama"
+        android:layout_below="@id/etNAMA_LENGKAP"
         android:layout_alignParentStart="true"
         android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
@@ -67,10 +67,10 @@
         android:fontFamily="@font/poppins"/>
 
     <EditText
-        android:id="@+id/editTextAlamat"
+        android:id="@+id/etALAMAT"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textViewAlamat"
+        android:layout_below="@id/tvALAMAT"
         android:layout_marginTop="8dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
@@ -81,11 +81,11 @@
         android:drawablePadding="4dp"/>
 
     <TextView
-        android:id="@+id/textViewNoHP"
+        android:id="@+id/tvNO_HP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="No HP"
-        android:layout_below="@id/editTextAlamat"
+        android:layout_below="@id/etALAMAT"
         android:layout_alignParentStart="true"
         android:layout_marginTop="16dp"
         android:layout_marginStart="20dp"
@@ -93,10 +93,10 @@
         android:fontFamily="@font/poppins"/>
 
     <EditText
-        android:id="@+id/editTextNoHP"
+        android:id="@+id/etNO_HP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textViewNoHP"
+        android:layout_below="@id/tvNO_HP"
         android:layout_marginTop="8dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
@@ -104,14 +104,41 @@
         android:inputType="phone"
         android:minHeight="48dp"
         android:fontFamily="@font/poppins"
-        android:drawableStart="@drawable/baseline_local_phone_24"
+        android:drawableStart="@drawable/baseline_phone_24"
+        android:drawablePadding="4dp"/>
+
+    <TextView
+        android:id="@+id/tvBRANCH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No HP"
+        android:layout_below="@id/etNO_HP"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/poppins"/>
+
+    <EditText
+        android:id="@+id/etBRANCH"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvBRANCH"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Nomor"
+        android:inputType="phone"
+        android:minHeight="48dp"
+        android:fontFamily="@font/poppins"
+        android:drawableStart="@drawable/baseline_phone_24"
         android:drawablePadding="4dp"/>
 
     <Button
         android:id="@+id/buttonSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextNoHP"
+        android:layout_below="@id/etBRANCH"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
@@ -120,6 +147,7 @@
         android:fontFamily="@font/poppins_semibold"
         android:text="Simpan"
         android:textSize="20sp" />
+
 
   </RelativeLayout>
 

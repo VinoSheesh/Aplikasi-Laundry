@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">LaundryApp</string>
+    <string name="card_pelanggan_id">ID_pelanggan</string>
+    <string name="nama_pelanggan">Nama_pelanggan</string>
+    <string name="alamat_pelanggan">Alamat_pelanggan</string>
+    <string name="terdaftar_pelanggan">Terdaftar_pelanggan</string>
+    <string name="no_hp">No_HP</string>
+    <string name="hubungi">Hubungi</string>
+    <string name="lihat">Lihat</string>
+    <string name="card_pegawai">ID_Pegawai</string>
+    <string name="nama_pegawai">Nama_pegawai</string>
+    <string name="cabang">Cabang</string>
 </resources>
