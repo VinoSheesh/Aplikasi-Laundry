@@ -11,4 +11,7 @@
     <string name="card_pegawai">Employee ID</string>
     <string name="nama_pegawai">Employee Name</string>
     <string name="cabang">Branch</string>
+    <string name="activity_tambah_pelanggan">Add Customer</string>
+    <string name="nama_lengkap">Full Name</string>
+    <string name="simpan">Save</string>
 </resources>
