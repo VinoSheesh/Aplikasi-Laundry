@@ -3,37 +3,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/BackgroundCard">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         app:cardCornerRadius="12dp"
-        android:elevation="12dp">
+        android:elevation="12dp"
+        style="@style/widgetcard">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            style="@style/widgetcard">
 
             <TextView
                 android:id="@+id/tvID_PEGAWAI"
-                android:layout_weight="1"
+                style="@style/Font1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:text="@string/card_pegawai"
-                android:textSize="18sp"
+                android:layout_weight="1"
+                android:background="#FFBC13"
                 android:fontFamily="@font/poppins_semibold"
                 android:padding="8dp"
-                android:background="#FFBC13"/>
+                android:text="@string/card_pegawai"
+                android:textSize="18sp"
+                tools:ignore="TextContrastCheck" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                style="@style/widgetcard">
 
                 <TextView
                     android:id="@+id/tvNAMA_PEGAWAI"
@@ -93,7 +99,8 @@
                 android:layout_below="@id/tvNO_HP"
                 android:gravity="end"
                 android:orientation="horizontal"
-                android:padding="8dp">
+                android:padding="8dp"
+                style="@style/widgetcard">
 
                 <Button
                     android:id="@+id/btHUBUNGI"
@@ -102,11 +109,11 @@
                     android:layout_marginStart="5dp"
                     android:layout_marginEnd="5dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#302727"
                     android:fontFamily="@font/poppins_semibold"
                     android:text="@string/hubungi"
                     android:textSize="14dp"
-                    tools:ignore="TextSizeCheck" />
+                    tools:ignore="TextSizeCheck"
+                    style="@style/Tombol1"/>
 
                 <Button
                     android:id="@+id/btLIHAT"
@@ -115,12 +122,11 @@
                     android:layout_marginStart="5dp"
                     android:layout_marginEnd="5dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#FFBC13"
                     android:fontFamily="@font/poppins_semibold"
                     android:text="@string/lihat"
-                    android:textColor="#302727"
                     android:textSize="14dp"
-                    tools:ignore="TextSizeCheck" />
+                    tools:ignore="TextSizeCheck"
+                    style="@style/Tombol2"/>
             </LinearLayout>
 
         </LinearLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pegawai.TambahPegawaiActivity">
+
+    <TextView
+        android:id="@+id/tvTAMBAH_PEGAWAI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/activity_tambah_pegawai"
+        android:textAlignment="center"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTAMBAH_PEGAWAI">
+
+        <TextView
+            android:id="@+id/tvNAMA_LENGKAP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/nama_lengkap" />
+
+        <EditText
+            android:id="@+id/etNAMA_LENGKAP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvNAMA_LENGKAP"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:drawableStart="@drawable/baseline_person_24"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/poppins"
+            android:hint="@string/nama_lengkap"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/tvALAMAT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etNAMA_LENGKAP"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/alamat_pelanggan" />
+
+        <EditText
+            android:id="@+id/etALAMAT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvALAMAT"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:drawableStart="@drawable/baseline_location_on_24"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/poppins"
+            android:hint="@string/alamat_pelanggan"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/tvNO_HP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etALAMAT"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/no_hp" />
+
+        <EditText
+            android:id="@+id/etNO_HP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvNO_HP"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:drawableStart="@drawable/baseline_phone_24"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/poppins"
+            android:hint="@string/no_hp"
+            android:inputType="phone"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/tvBRANCH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etNO_HP"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/cabang" />
+
+        <EditText
+            android:id="@+id/etBRANCH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvBRANCH"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:drawableStart="@drawable/baseline_storefront_24"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/poppins"
+            android:hint="@string/cabang"
+            android:inputType="text"
+            android:minHeight="48dp" />
+
+        <Button
+            android:id="@+id/btSIMPAN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etBRANCH"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/simpan"
+            android:textSize="20sp"
+            style="@style/Tombol1"/>
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

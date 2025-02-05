@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeActivity"
-    android:clipToPadding="false">
+    android:clipToPadding="false"
+    style="@style/Background">
 
     <TextView
         android:id="@+id/greetingTextView"
@@ -54,6 +55,7 @@
         app:layout_constraintVertical_bias="0.023">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/widget"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -131,6 +133,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/PELANGGAN"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -233,7 +236,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                style="@style/widget">
 
                 <ImageView
                     android:layout_width="60dp"
@@ -264,7 +268,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                style="@style/widget">
 
                 <ImageView
                     android:layout_width="60dp"
@@ -309,7 +314,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                style="@style/widget">
 
                 <ImageView
                     android:layout_width="60dp"
@@ -337,10 +343,12 @@
             app:cardElevation="2dp">
 
             <LinearLayout
+                android:id="@+id/PEGAWAI"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                style="@style/widget">
 
                 <ImageView
                     android:layout_width="60dp"
@@ -384,7 +392,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                style="@style/widget">
 
                 <ImageView
                     android:layout_width="60dp"
@@ -415,7 +424,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                style="@style/widget">
 
                 <ImageView
                     android:layout_width="60dp"

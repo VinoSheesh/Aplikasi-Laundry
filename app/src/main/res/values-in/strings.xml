@@ -14,4 +14,5 @@
     <string name="activity_tambah_pelanggan">Tambah Pelanggan</string>
     <string name="nama_lengkap">Nama Lengkap</string>
     <string name="simpan">Simpan</string>
+    <string name="activity_tambah_pegawai">Tambah Pegawai</string>
 </resources>

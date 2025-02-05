@@ -1,11 +1,15 @@
 package com.tugasss.laundryapp
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.widget.TextView
+import com.tugasss.laundryapp.pegawai.Activity_data_pegawai
+import com.tugasss.laundryapp.pelanggan.DataPelangganActivity
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -14,6 +18,17 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_home)
+
+        val pelangganLayout = findViewById<LinearLayout>(R.id.PELANGGAN)
+        pelangganLayout.setOnClickListener {
+            val intent = Intent(this, DataPelangganActivity::class.java)
+            startActivity(intent)
+        }
+        val pegawaiLayout = findViewById<LinearLayout>(R.id.PEGAWAI)
+        pegawaiLayout.setOnClickListener {
+            val intent = Intent(this, Activity_data_pegawai::class.java)
+            startActivity(intent)
+        }
 
         val greetingTextView: TextView = findViewById(R.id.greetingTextView)
         val dateTextView: TextView = findViewById(R.id.dateTextView)
