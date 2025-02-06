@@ -14,4 +14,10 @@
     <string name="nama_lengkap">Nama_lengkap</string>
     <string name="simpan">Simpan</string>
     <string name="activity_tambah_pegawai">Tambah_pegawai</string>
+    <string name="validasi_nama_pelanggan">validasi_nama_pelanggan</string>
+    <string name="validasi_alamat_pelanggan">validasi_alamat_pelanggan</string>
+    <string name="validasi_nohp_pelanggan">validasi_nohp_pelanggan</string>
+    <string name="validasi_cabang_pelanggan">Cabang pelanggan tidak boleh kosong</string>
+    <string name="sukses_simpan_pelanggan">Pelanggan berhasil disimpan</string>
+    <string name="gagal_simpan_pelanggan">Gagal menyimpan pelanggan</string>
 </resources>
