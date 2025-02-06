@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cvCARD_PELANGGAN"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     style="@style/Background">
 
@@ -114,7 +114,7 @@
                     android:text="@string/lihat"
                     android:textSize="14dp"
                     tools:ignore="TextSizeCheck"
-                    style="@style/Tombol1"/>
+                    style="@style/Tombol2"/>
             </LinearLayout>
 
         </LinearLayout>
