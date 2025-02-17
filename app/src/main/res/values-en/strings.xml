@@ -19,6 +19,12 @@
     <string name="validasi_alamat_pelanggan">Customer Adress Can\'t be empty</string>
     <string name="validasi_nohp_pelanggan">Customer Phone Number Can\'t be empty</string>
     <string name="validasi_cabang_pelanggan">Customer Branch Can\'t be empty</string>
-    <string name="sukses_simpan_pelanggan">Customer Successfuly Added</string>
-    <string name="gagal_simpan_pelanggan">Customer Failed to Added</string>
+    <string name="sukses_simpan_pelanggan">Customer Successfuly Saved</string>
+    <string name="gagal_simpan_pelanggan">Customer Failed to Saved</string>
+    <string name="validasi_nama_pegawai">Employee Name Can\'t be empty</string>
+    <string name="validasi_alamat_pegawai">Employee Adress Can\'t be empty</string>
+    <string name="validasi_nohp_pegawai">Employee Phone Number Can\'t be empty</string>
+    <string name="validasi_cabang_pegawai">Employee Branch Can\'t be empty</string>
+    <string name="sukes_simpan_pegawai">Employee Successfuly Saved</string>
+    <string name="gagal_simpan_pegawai">Employee Failed to Saved</string>
 </resources>

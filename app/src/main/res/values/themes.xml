@@ -37,10 +37,24 @@
     </style>
 
     <style name="Tombol3">
-    <item name="android:background">
-    #302727
-    </item>
+        <item name="android:background">
+            #302727
+        </item>
     </style>
+
+    <style name="Font1">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="fab">
+        <item name="android:backgroundTint">#ff0000</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:buttonCornerRadius">16dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
 
 
     <style name="Theme.LaundryApp" parent="Base.Theme.LaundryApp" />

@@ -105,7 +105,7 @@
             android:fontFamily="@font/poppins"
             android:hint="@string/no_hp"
             android:inputType="phone"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"/>
 
         <TextView
             android:id="@+id/tvBRANCH"

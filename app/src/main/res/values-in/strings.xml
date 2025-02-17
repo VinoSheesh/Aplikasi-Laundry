@@ -21,4 +21,10 @@
     <string name="validasi_cabang_pelanggan">Cabang pelanggan tidak boleh kosong</string>
     <string name="sukses_simpan_pelanggan">Pelanggan berhasil disimpan</string>
     <string name="gagal_simpan_pelanggan">Gagal menyimpan pelanggan</string>
+    <string name="validasi_nama_pegawai">Nama Pegawai tidak boleh kosong</string>
+    <string name="validasi_alamat_pegawai">Alamat pegawai tidak boleh kosong</string>
+    <string name="validasi_nohp_pegawai">Nomor HP pegawai tidak boleh kosong</string>
+    <string name="validasi_cabang_pegawai">Cabang Pegawai tidak boleh kosong</string>
+    <string name="sukes_simpan_pegawai">Pegawai berhasil disimpan</string>
+    <string name="gagal_simpan_pegawai">Gagal menyimpan pegawai</string>
 </resources>
