@@ -63,34 +63,25 @@
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/tvTERDAFTAR"
+                    android:id="@+id/tvCABANG"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/tvALAMAT_PELANGGAN"
-                    android:layout_weight="1"
+                    android:layout_below="@id/tvALAMAT_PEGAWAI"
                     android:fontFamily="@font/poppins"
-                    android:text="@string/terdaftar_pelanggan"
-                    android:textSize="18sp" />
+                    android:text="@string/cabang"
+                    android:textSize="18sp"
+                    android:layout_weight="1"/>
 
                 <TextView
                     android:id="@+id/tvNO_HP"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/tvTERDAFTAR"
+                    android:layout_below="@id/tvCABANG"
                     android:fontFamily="@font/poppins"
                     android:text="@string/no_hp"
                     android:textSize="18sp"
                     android:layout_weight="1"/>
 
-                <TextView
-                    android:id="@+id/tvCABANG"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tvNO_HP"
-                    android:fontFamily="@font/poppins"
-                    android:text="@string/cabang"
-                    android:textSize="18sp"
-                    android:layout_weight="1"/>
 
             </LinearLayout>
 

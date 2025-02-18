@@ -28,7 +28,7 @@ class AdapterDataPelanggan(
         holder.tvNama.text = item.namaPelanggan
         holder.tvAlamat.text = item.alamatPelanggan
         holder.tvNoHP.text = item.noHPPelanggan
-        holder.tvTerdaftar.text = item.terdaftar
+        holder.tvCabang.text = item.idCabang
 
         holder.cvCARD.setOnClickListener {
 
@@ -50,7 +50,7 @@ class AdapterDataPelanggan(
     val tvNama: TextView = itemView.findViewById(R.id.tvNAMA_PELANGGAN)
     val tvAlamat: TextView = itemView.findViewById(R.id.tvALAMAT_PELANGGAN)
     val tvNoHP: TextView = itemView.findViewById(R.id.tvNO_HP)
-    val tvTerdaftar: TextView = itemView.findViewById(R.id.tvTERDAFTAR)
+    val tvCabang: TextView = itemView.findViewById(R.id.tvCABANG)
     val cvCARD: CardView = itemView.findViewById(R.id.cvCARD_PELANGGAN)
     val btHubungi: Button = itemView.findViewById(R.id.btHUBUNGI)
     val btLihat: Button = itemView.findViewById(R.id.btLIHAT)
