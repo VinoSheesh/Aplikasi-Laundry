@@ -28,14 +28,13 @@
         android:id="@+id/dateTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/poppins"
         android:text="TextView"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintEnd_toEndOf="@+id/greetingTextView"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/greetingTextView"
         app:layout_constraintTop_toBottomOf="@+id/greetingTextView" />
 
@@ -129,7 +128,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="Transaksi"
-                        android:fontFamily="@font/poppins"/>
+                        android:fontFamily="@font/poppins_medium"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -151,7 +150,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="Pelanggan"
-                        android:fontFamily="@font/poppins"/>
+                        android:fontFamily="@font/poppins_medium"/>
 
                 </LinearLayout>
 
@@ -173,7 +172,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="Laporan"
-                        android:fontFamily="@font/poppins"/>
+                        android:fontFamily="@font/poppins_medium"/>
 
                 </LinearLayout>
             </LinearLayout>
@@ -189,7 +188,7 @@
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/poppins_semibold"
         android:text="Opsi Menu"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -202,7 +201,7 @@
         android:layout_marginTop="1dp"
         android:fontFamily="@font/poppins"
         android:text="Kami Selalu Siap Melayani Anda"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView2"
@@ -212,7 +211,7 @@
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="4dp"
         android:orientation="horizontal"
         android:clipChildren="false"
         android:clipToPadding="false"
@@ -230,7 +229,7 @@
             android:layout_marginBottom="12dp"
             android:layout_weight="1"
             app:cardCornerRadius="8dp"
-            app:cardElevation="2dp">
+            app:cardElevation="4dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -250,7 +249,7 @@
                     android:layout_height="wrap_content"
                     android:text="Akun"
                     android:layout_weight="1"
-                    android:fontFamily="@font/poppins"/>
+                    android:fontFamily="@font/poppins_medium"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -262,7 +261,7 @@
             android:layout_marginEnd="16dp"
             android:layout_weight="1"
             app:cardCornerRadius="8dp"
-            app:cardElevation="2dp">
+            app:cardElevation="4dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -282,7 +281,7 @@
                     android:layout_height="wrap_content"
                     android:text="Layanan"
                     android:layout_weight="1"
-                    android:fontFamily="@font/poppins"/>
+                    android:fontFamily="@font/poppins_medium"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
@@ -308,7 +307,7 @@
             android:layout_marginBottom="12dp"
             android:layout_weight="1"
             app:cardCornerRadius="8dp"
-            app:cardElevation="2dp">
+            app:cardElevation="4dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -328,7 +327,7 @@
                     android:layout_height="wrap_content"
                     android:text="Tambahan"
                     android:layout_weight="1"
-                    android:fontFamily="@font/poppins"/>
+                    android:fontFamily="@font/poppins_medium"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -340,7 +339,7 @@
             android:layout_marginBottom="12dp"
             android:layout_weight="1"
             app:cardCornerRadius="8dp"
-            app:cardElevation="2dp">
+            app:cardElevation="4dp">
 
             <LinearLayout
                 android:id="@+id/PEGAWAI"
@@ -361,7 +360,7 @@
                     android:layout_height="wrap_content"
                     android:text="Pegawai"
                     android:layout_weight="1"
-                    android:fontFamily="@font/poppins"/>
+                    android:fontFamily="@font/poppins_medium"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
@@ -386,7 +385,7 @@
             android:layout_marginBottom="12dp"
             android:layout_weight="1"
             app:cardCornerRadius="8dp"
-            app:cardElevation="2dp">
+            app:cardElevation="4dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -406,7 +405,7 @@
                     android:layout_height="wrap_content"
                     android:text="Cabang"
                     android:layout_weight="1"
-                    android:fontFamily="@font/poppins"/>
+                    android:fontFamily="@font/poppins_medium"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -418,7 +417,7 @@
             android:layout_marginEnd="16dp"
             android:layout_weight="1"
             app:cardCornerRadius="8dp"
-            app:cardElevation="2dp">
+            app:cardElevation="4dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -438,7 +437,7 @@
                     android:layout_height="wrap_content"
                     android:text="Printer"
                     android:layout_weight="1"
-                    android:fontFamily="@font/poppins"/>
+                    android:fontFamily="@font/poppins_medium"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
