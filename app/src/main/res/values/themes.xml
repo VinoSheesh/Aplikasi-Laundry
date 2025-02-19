@@ -11,17 +11,21 @@
     </item>
     </style>
 
-
     <style name="widget">
-        <item name="android:background">
+        <item name="android:backgroundTint">
             #FFFFFF
         </item>
     </style>
 
+    <style name="header">
+        <item name="android:background">#4CAF50</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
     <style name="Tombol1">
-        <item name="android:backgroundTint">
-            #28a745
-        </item>
+        <item name="android:backgroundTint">#48CF50</item>
+            <item name="android:textColor">#FFFFFF</item>
+
         <item name="android:textColor">#FFFFFF</item>
         <item name="android:buttonCornerRadius">16dp</item>
         <item name="android:padding">12dp</item>
@@ -29,7 +33,7 @@
     </style>
 
     <style name="Tombol2">
-        <item name="android:backgroundTint">#f39c12</item>
+        <item name="android:backgroundTint">#FB8C00</item>
         <item name="android:textColor">#FFFFFF</item>
         <item name="android:padding">12dp</item>
         <item name="android:buttonCornerRadius">16dp</item>

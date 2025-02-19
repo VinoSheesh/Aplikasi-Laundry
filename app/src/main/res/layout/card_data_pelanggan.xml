@@ -5,29 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    style="@style/Background">
+    style="@style/BackgroundCard">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="14dp"
         app:cardCornerRadius="12dp"
-        app:cardElevation="12dp">
+        app:cardElevation="12dp"
+        style="@style/widgetcard">
 
         <LinearLayout
-            style="@style/widget"
+            style="@style/widgetcard"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/tvID_PELANGGAN"
-                style="@style/Font1"
+                style="@style/header"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_weight="1"
-                android:background="#0ffc03"
                 android:fontFamily="@font/poppins_semibold"
                 android:padding="8dp"
                 android:text="@string/card_pelanggan_id"

@@ -53,7 +53,8 @@
             android:drawablePadding="4dp"
             android:fontFamily="@font/poppins"
             android:hint="@string/nama_lengkap"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:background="@drawable/etborder"/>
 
         <TextView
             android:id="@+id/tvALAMAT"
@@ -78,7 +79,8 @@
             android:drawablePadding="4dp"
             android:fontFamily="@font/poppins"
             android:hint="@string/alamat_pelanggan"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:background="@drawable/etborder"/>
 
         <TextView
             android:id="@+id/tvNO_HP"
@@ -105,7 +107,8 @@
             android:fontFamily="@font/poppins"
             android:hint="@string/no_hp"
             android:inputType="phone"
-            android:minHeight="48dp"/>
+            android:minHeight="48dp"
+            android:background="@drawable/etborder"/>
 
         <TextView
             android:id="@+id/tvBRANCH"
@@ -132,7 +135,8 @@
             android:fontFamily="@font/poppins"
             android:hint="@string/cabang"
             android:inputType="text"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:background="@drawable/etborder"/>
 
         <Button
             android:id="@+id/btSIMPAN"

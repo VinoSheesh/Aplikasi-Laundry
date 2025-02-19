@@ -18,13 +18,16 @@
     </style>
 
     <style name="widgetcard">
-        <item name="android:background">#36393E</item>
+        <item name="android:backgroundTint">#4B4B4B</item>
+    </style>
+
+    <style name="header">
+        <item name="android:background">#0CCA0C</item>
+        <item name="android:textColor">#FFFFFF</item>
     </style>
 
     <style name="Tombol1">
-        <item name="android:backgroundTint">
-            #28a745
-        </item>
+        <item name="android:backgroundTint">#2DD42D</item>
         <item name="android:textColor">#FFFFFF</item>
         <item name="android:buttonCornerRadius">16dp</item>
         <item name="android:padding">12dp</item>
@@ -32,7 +35,7 @@
     </style>
 
     <style name="Tombol2">
-        <item name="android:backgroundTint">#f39c12</item>
+        <item name="android:backgroundTint">#FFA500</item>
         <item name="android:textColor">#FFFFFF</item>
         <item name="android:padding">12dp</item>
         <item name="android:buttonCornerRadius">16dp</item>
