@@ -29,4 +29,7 @@
     <string name="nama_layanan">Nama_layanan</string>
     <string name="card_layanan">ID_layanan</string>
     <string name="harga_layanan">Harga_layanan</string>
+    <string name="fill_alamat">Fill_alamat</string>
+    <string name="fill_nohp">Fill_nohp</string>
+    <string name="fill_cabang">Fill_cabang</string>
 </resources>
