@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "397727010732",
+    "firebase_url": "https://laundryappvindev-default-rtdb.firebaseio.com",
+    "project_id": "laundryappvindev",
+    "storage_bucket": "laundryappvindev.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:397727010732:android:7a6ede8d5fc12d1f5bb409",
+        "android_client_info": {
+          "package_name": "com.tugasss.laundryapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAC6WtDFVCuHChIHyKM3f05Mb1AFybot0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
