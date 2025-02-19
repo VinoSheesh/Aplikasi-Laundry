@@ -15,7 +15,7 @@
         app:cardElevation="12dp"
         style="@style/widgetcard">
 
-        <LinearLayout
+        <RelativeLayout
             style="@style/widgetcard"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -32,9 +32,11 @@
                 android:padding="8dp"
                 android:text="@string/card_pelanggan_id"
                 android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                tools:ignore="TextContrastCheck" />
 
             <LinearLayout
+                android:layout_below="@id/tvID_PELANGGAN"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -77,7 +79,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:text="@string/alamat_pelanggan"
+                        android:text="@string/cabang"
                         android:layout_weight="0.4"/>
 
                     <TextView
@@ -98,7 +100,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:text="@string/alamat_pelanggan"
+                        android:text="@string/no_hp"
                         android:layout_weight="0.4"/>
 
                     <TextView
@@ -146,6 +148,7 @@
                         style="@style/Tombol2"/>
                 </LinearLayout>
         </LinearLayout>
+        </RelativeLayout>
 
 
     </androidx.cardview.widget.CardView>
