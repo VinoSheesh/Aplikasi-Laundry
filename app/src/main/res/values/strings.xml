@@ -26,4 +26,7 @@
     <string name="validasi_cabang_pegawai">validasi_cabang_pegawai</string>
     <string name="sukes_simpan_pegawai">sukes_simpan_pegawai</string>
     <string name="gagal_simpan_pegawai">gagal_simpan_pegawai</string>
+    <string name="nama_layanan">Nama_layanan</string>
+    <string name="card_layanan">ID_layanan</string>
+    <string name="harga_layanan">Harga_layanan</string>
 </resources>

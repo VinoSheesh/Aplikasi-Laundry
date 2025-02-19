@@ -27,4 +27,7 @@
     <string name="validasi_cabang_pegawai">Employee Branch Can\'t be empty</string>
     <string name="sukes_simpan_pegawai">Employee Successfuly Saved</string>
     <string name="gagal_simpan_pegawai">Employee Failed to Saved</string>
+    <string name="nama_layanan">Service Name</string>
+    <string name="card_layanan">Service ID</string>
+    <string name="harga_layanan">Service</string>
 </resources>

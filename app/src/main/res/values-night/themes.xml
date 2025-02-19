@@ -23,7 +23,7 @@
 
     <style name="Tombol1">
         <item name="android:backgroundTint">
-            #0ffc03
+            #28a745
         </item>
         <item name="android:textColor">#FFFFFF</item>
         <item name="android:buttonCornerRadius">16dp</item>
@@ -32,7 +32,7 @@
     </style>
 
     <style name="Tombol2">
-        <item name="android:backgroundTint">#ff0000</item>
+        <item name="android:backgroundTint">#f39c12</item>
         <item name="android:textColor">#FFFFFF</item>
         <item name="android:padding">12dp</item>
         <item name="android:buttonCornerRadius">16dp</item>

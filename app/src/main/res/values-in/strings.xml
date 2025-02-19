@@ -27,4 +27,7 @@
     <string name="validasi_cabang_pegawai">Cabang Pegawai tidak boleh kosong</string>
     <string name="sukes_simpan_pegawai">Pegawai berhasil disimpan</string>
     <string name="gagal_simpan_pegawai">Gagal menyimpan pegawai</string>
+    <string name="nama_layanan">Nama Layanan</string>
+    <string name="card_layanan">ID Layanan</string>
+    <string name="harga_layanan">"Harga "</string>
 </resources>
