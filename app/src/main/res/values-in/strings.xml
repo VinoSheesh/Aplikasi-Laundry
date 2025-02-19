@@ -3,14 +3,14 @@
     <string name="app_name">LaundryApp</string>
     <string name="card_pelanggan_id">ID Pelanggan</string>
     <string name="nama_pelanggan">Nama Pelanggan</string>
-    <string name="alamat_pelanggan">Alamat</string>
+    <string name="alamat_pelanggan">Alamat :</string>
     <string name="terdaftar_pelanggan">Terdaftar</string>
-    <string name="no_hp">Nomor Handphone</string>
+    <string name="no_hp">Nomor Handphone :</string>
     <string name="hubungi">Hubungi</string>
     <string name="lihat">Lihat</string>
     <string name="card_pegawai">ID Pegawai</string>
     <string name="nama_pegawai">Nama Pegawai</string>
-    <string name="cabang">Cabang</string>
+    <string name="cabang">Cabang :</string>
     <string name="activity_tambah_pelanggan">Tambah Pelanggan</string>
     <string name="nama_lengkap">Nama Lengkap</string>
     <string name="simpan">Simpan</string>

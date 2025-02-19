@@ -109,7 +109,8 @@
         android:hint="@string/no_hp"
         android:inputType="phone"
         android:minHeight="48dp"
-        android:background="@drawable/etborder"/>
+        android:background="@drawable/etborder"
+        android:maxLength="13"/>
 
     <TextView
         android:id="@+id/tvBRANCH"
