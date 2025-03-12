@@ -36,6 +36,9 @@ class Activity_data_pegawai : AppCompatActivity() {
         rvDATA_PEGAWAI.setHasFixedSize(true)
         pegawaiList = arrayListOf<modelPegawai>()
         getData()
+        fabDATA_PENGGUNA_Tambah.setOnClickListener{
+            val intent = Intent(this, TambahPegawaiActivity::Class.java)
+        }
         val tambahpegawai = findViewById<FloatingActionButton>(R.id.fabDATA_PENGGUNA_Tambah)
         tambahpegawai.setOnClickListener {
             val intent = Intent(this, TambahPegawaiActivity::class.java)
