@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.widget.TextView
+import com.tugasss.laundryapp.layanan.DataLayananActivity
 import com.tugasss.laundryapp.pegawai.Activity_data_pegawai
 import com.tugasss.laundryapp.pelanggan.DataPelangganActivity
 import java.text.SimpleDateFormat
@@ -27,6 +28,11 @@ class HomeActivity : AppCompatActivity() {
         val pegawaiLayout = findViewById<LinearLayout>(R.id.PEGAWAI)
         pegawaiLayout.setOnClickListener {
             val intent = Intent(this, Activity_data_pegawai::class.java)
+            startActivity(intent)
+        }
+        val layananLayout = findViewById<LinearLayout>(R.id.LAYANAN)
+        layananLayout.setOnClickListener {
+            val intent = Intent(this, DataLayananActivity::class.java)
             startActivity(intent)
         }
 

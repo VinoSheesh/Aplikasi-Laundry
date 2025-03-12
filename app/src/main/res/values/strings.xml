@@ -32,4 +32,5 @@
     <string name="fill_alamat">Fill_alamat</string>
     <string name="fill_nohp">Fill_nohp</string>
     <string name="fill_cabang">Fill_cabang</string>
+    <string name="activity_tambah_layanan">Tambah_layanan</string>
 </resources>

@@ -12,68 +12,145 @@
         android:layout_height="wrap_content"
         android:layout_margin="14dp"
         app:cardCornerRadius="12dp"
-        android:elevation="12dp"
+        app:cardElevation="4dp"
         style="@style/widgetcard">
 
-        <LinearLayout
+        <RelativeLayout
+            style="@style/widgetcard"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            style="@style/widgetcard">
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/tvID_LAYANAN"
-                style="@style/Font1"
+                style="@style/header"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
                 android:layout_weight="1"
-                android:background="#0ffc03"
                 android:fontFamily="@font/poppins_semibold"
                 android:padding="8dp"
                 android:text="@string/card_layanan"
+                android:textColor="#FFFFFF"
                 android:textSize="18sp"
-                tools:ignore="TextContrastCheck" />
+                tools:ignore="TextContrastCheck"/>
+
             <LinearLayout
+                android:layout_below="@id/tvID_LAYANAN"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
                 android:orientation="vertical"
-                style="@style/widgetcard">
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp">
 
                 <TextView
                     android:id="@+id/tvNAMA_LAYANAN"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/tvID_LAYANAN"
                     android:layout_weight="1"
-                    android:fontFamily="@font/poppins"
                     android:text="@string/nama_layanan"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/tvHARGA_LAYANAN"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tvNAMA_PELANGGAN"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/poppins"
-                    android:text="@string/harga_layanan"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/tvCABANG"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tvHARGA_LAYANAN"
-                    android:fontFamily="@font/poppins"
-                    android:text="@string/cabang"
                     android:textSize="18sp"
-                    android:layout_weight="1"/>
+                    android:fontFamily="@font/poppins_bold"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:layout_marginTop="4dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="@string/harga_layanan"
+                        android:layout_weight="0.4"
+                        android:fontFamily="@font/poppins_medium"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text=":"
+                        android:layout_weight="0.1"
+                        android:fontFamily="@font/poppins_medium"/>
+                    <TextView
+                        android:id="@+id/tvHARGA_LAYANAN"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/poppins"
+                        android:text="@string/harga_layanan"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="@string/cabang"
+                        android:layout_weight="0.4"
+                        android:fontFamily="@font/poppins_medium"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text=":"
+                        android:layout_weight="0.1"
+                        android:fontFamily="@font/poppins_medium"/>
+
+                    <TextView
+                        android:id="@+id/tvCABANG"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/poppins"
+                        android:text="@string/cabang"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="horizontal"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp">
+
+                    <Button
+                        android:id="@+id/btHUBUNGI"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/hubungi"
+                        android:textSize="14dp"
+                        tools:ignore="TextSizeCheck"
+                        style="@style/Tombol1"/>
+
+                    <Button
+                        android:id="@+id/btLIHAT"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/lihat"
+                        android:textSize="14dp"
+                        tools:ignore="TextSizeCheck"
+                        style="@style/Tombol2"/>
+                </LinearLayout>
+
             </LinearLayout>
 
-        </LinearLayout>
+        </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
 

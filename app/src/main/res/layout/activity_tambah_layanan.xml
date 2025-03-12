@@ -8,12 +8,12 @@
     tools:context=".layanan.TambahLayananActivity">
 
     <TextView
-        android:id="@+id/tvTAMBAH_PEGAWAI"
+        android:id="@+id/tvTAMBAH_LAYANAN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:fontFamily="@font/poppins_semibold"
-        android:text="@string/activity_tambah_pegawai"
+        android:text="@string/activity_tambah_layanan"
         android:textAlignment="center"
         android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,10 +28,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTAMBAH_PEGAWAI">
+        app:layout_constraintTop_toBottomOf="@+id/tvTAMBAH_LAYANAN">
 
         <TextView
-            android:id="@+id/tvNAMA_LENGKAP"
+            android:id="@+id/tvNAMA_LAYANAN"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -39,79 +39,52 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins"
-            android:text="@string/nama_lengkap" />
+            android:text="@string/nama_layanan" />
 
         <EditText
-            android:id="@+id/etNAMA_LENGKAP"
+            android:id="@+id/etNAMA_LAYANAN"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tvNAMA_LENGKAP"
+            android:layout_below="@id/tvNAMA_LAYANAN"
             android:layout_marginStart="20dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="20dp"
             android:drawableStart="@drawable/baseline_person_24"
             android:drawablePadding="4dp"
             android:fontFamily="@font/poppins"
-            android:hint="@string/nama_lengkap"
+            android:hint="@string/nama_layanan"
             android:minHeight="48dp" />
 
         <TextView
-            android:id="@+id/tvALAMAT"
+            android:id="@+id/tvHARGA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/etNAMA_LENGKAP"
+            android:layout_below="@id/etNAMA_LAYANAN"
             android:layout_alignParentStart="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/poppins"
-            android:text="@string/alamat_pelanggan" />
+            android:text="@string/harga_layanan" />
 
         <EditText
-            android:id="@+id/etALAMAT"
+            android:id="@+id/etHARGA"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tvALAMAT"
+            android:layout_below="@id/tvHARGA"
             android:layout_marginStart="20dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="20dp"
             android:drawableStart="@drawable/baseline_location_on_24"
             android:drawablePadding="4dp"
             android:fontFamily="@font/poppins"
-            android:hint="@string/alamat_pelanggan"
-            android:minHeight="48dp" />
-
-        <TextView
-            android:id="@+id/tvNO_HP"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/etALAMAT"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="20dp"
-            android:fontFamily="@font/poppins"
-            android:text="@string/no_hp" />
-
-        <EditText
-            android:id="@+id/etNO_HP"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tvNO_HP"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="20dp"
-            android:drawableStart="@drawable/baseline_phone_24"
-            android:drawablePadding="4dp"
-            android:fontFamily="@font/poppins"
-            android:hint="@string/no_hp"
-            android:inputType="phone"
+            android:hint="@string/harga_layanan"
             android:minHeight="48dp" />
 
         <TextView
             android:id="@+id/tvBRANCH"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/etNO_HP"
+            android:layout_below="@id/etHARGA"
             android:layout_alignParentStart="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="16dp"

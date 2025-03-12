@@ -29,8 +29,9 @@
     <string name="gagal_simpan_pegawai">Employee Failed to Saved</string>
     <string name="nama_layanan">Service Name</string>
     <string name="card_layanan">Service ID</string>
-    <string name="harga_layanan">Service</string>
+    <string name="harga_layanan">Cost</string>
     <string name="fill_alamat">Adress :</string>
     <string name="fill_nohp">Phone :</string>
     <string name="fill_cabang">Branch :</string>
+    <string name="activity_tambah_layanan">Add Services</string>
 </resources>
