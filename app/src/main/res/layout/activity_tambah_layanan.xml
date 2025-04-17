@@ -49,11 +49,12 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="20dp"
-            android:drawableStart="@drawable/baseline_person_24"
+            android:drawableStart="@drawable/baseline_local_laundry_service_24"
             android:drawablePadding="4dp"
             android:fontFamily="@font/poppins"
             android:hint="@string/nama_layanan"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:background="@drawable/etborder"/>
 
         <TextView
             android:id="@+id/tvHARGA"
@@ -74,11 +75,12 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="20dp"
-            android:drawableStart="@drawable/baseline_location_on_24"
+            android:drawableStart="@drawable/baseline_attach_money_24"
             android:drawablePadding="4dp"
             android:fontFamily="@font/poppins"
             android:hint="@string/harga_layanan"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:background="@drawable/etborder"/>
 
         <TextView
             android:id="@+id/tvBRANCH"
@@ -105,7 +107,8 @@
             android:fontFamily="@font/poppins"
             android:hint="@string/cabang"
             android:inputType="text"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:background="@drawable/etborder"/>
 
         <Button
             android:id="@+id/btSIMPAN"
