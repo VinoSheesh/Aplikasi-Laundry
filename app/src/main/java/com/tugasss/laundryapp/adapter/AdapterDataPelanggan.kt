@@ -36,8 +36,54 @@ class AdapterDataPelanggan(
             holder.btHubungi.setOnClickListener{
 
         }
-            holder.btLihat.setOnClickListener{
+        holder.btLihat.setOnClickListener {
+            // Inflate layout pop-up
+            val dialogView = LayoutInflater.from(holder.itemView.context)
+                .inflate(R.layout.dialog_mod_pelanggan, null)
 
+            // Bikin AlertDialog
+            val dialogBuilder = android.app.AlertDialog.Builder(holder.itemView.context)
+                .setView(dialogView)
+                .setCancelable(true) // Bisa ditutup dengan klik luar dialog
+
+            val alertDialog = dialogBuilder.create()
+
+            // Binding komponen dalam popup
+            val tvIdPelanggan = dialogView.findViewById<TextView>(R.id.tvID_PELANGGAN)
+            val tvNamaPelanggan = dialogView.findViewById<TextView>(R.id.tvNAMA_PELANGGAN)
+            val tvAlamatPelanggan = dialogView.findViewById<TextView>(R.id.tvALAMAT_PELANGGAN)
+            val tvNoHPPelanggan = dialogView.findViewById<TextView>(R.id.tvNO_HP)
+            val tvCabangPelanggan = dialogView.findViewById<TextView>(R.id.tvCABANG)
+
+            val btEdit = dialogView.findViewById<Button>(R.id.btDIALOG_MOD_PELANGGAN_Edit)
+            val btHapus = dialogView.findViewById<Button>(R.id.btDIALOG_MOD_PELANGGAN_Hapus)
+
+            // Set data pelanggan ke popup
+            tvIdPelanggan.text = item.idPelanggan
+            tvNamaPelanggan.text = item.namaPelanggan
+            tvAlamatPelanggan.text = item.alamatPelanggan
+            tvNoHPPelanggan.text = item.noHPPelanggan
+            tvCabangPelanggan.text = item.idCabang
+
+            // Tombol edit dan hapus tinggal diset onClickListener kalau mau
+            btEdit.setOnClickListener {
+                // Aksi edit
+            }
+
+            btHapus.setOnClickListener {
+                // Hapus data dari list
+                val position = holder.adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    listPelanggan.removeAt(position)
+                    notifyItemRemoved(position)
+
+                    // Tutup dialog setelah hapus
+                    alertDialog.dismiss()
+                }
+            }
+
+            // Tampilkan dialog
+            alertDialog.show()
         }
     }
 

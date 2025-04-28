@@ -9,7 +9,7 @@
     tools:context=".pelanggan.TambahPelangganActivity">
 
   <TextView
-      android:id="@+id/tvTAMBAH_PELANGGAN"
+      android:id="@+id/tvJudulHalaman"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginTop="4dp"
@@ -30,7 +30,7 @@
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/tvTAMBAH_PELANGGAN"
+      app:layout_constraintTop_toBottomOf="@id/tvJudulHalaman"
       app:layout_constraintVertical_bias="0.0">
 
     <LinearLayout
