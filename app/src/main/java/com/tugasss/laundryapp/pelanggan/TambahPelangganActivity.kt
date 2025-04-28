@@ -23,7 +23,7 @@ class TambahPelangganActivity : AppCompatActivity() {
     lateinit var etCabang: EditText
     lateinit var btSimpan: Button
 
-    var pelangganId: String? = null // Tambahan: buat tahu ini mode Edit atau Tambah
+    var pelangganId: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +31,6 @@ class TambahPelangganActivity : AppCompatActivity() {
         setContentView(R.layout.activity_tambah_pelanggan)
         init()
 
-        // Cek apakah ada data yang dikirim
         val dataIntent = intent
         if (dataIntent != null) {
             pelangganId = dataIntent.getStringExtra("id")
@@ -41,7 +40,6 @@ class TambahPelangganActivity : AppCompatActivity() {
             val cabang = dataIntent.getStringExtra("cabang")
 
             if (pelangganId != null) {
-                // Mode Edit
                 tvJudul.text = "Edit Data Pelanggan"
                 btSimpan.text = "Update"
                 etNama.setText(nama)

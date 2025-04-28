@@ -78,7 +78,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/poppins"
-            android:text="@string/alamat_pelanggan" />
+            android:text="@string/alamat_pegawai" />
 
         <EditText
             android:id="@+id/etALAMAT"
@@ -92,7 +92,7 @@
             android:drawableStart="@drawable/baseline_location_on_24"
             android:drawablePadding="4dp"
             android:fontFamily="@font/poppins"
-            android:hint="@string/alamat_pelanggan"
+            android:hint="@string/alamat_pegawai"
             android:minHeight="48dp" />
 
       </RelativeLayout>

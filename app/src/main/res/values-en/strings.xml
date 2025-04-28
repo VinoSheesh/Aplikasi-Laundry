@@ -34,4 +34,5 @@
     <string name="fill_nohp">Phone :</string>
     <string name="fill_cabang">Branch :</string>
     <string name="activity_tambah_layanan">Add Services</string>
+    <string name="alamat_pegawai">Adress</string>
 </resources>

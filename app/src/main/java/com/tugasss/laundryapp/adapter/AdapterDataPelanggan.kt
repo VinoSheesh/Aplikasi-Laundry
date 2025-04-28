@@ -1,5 +1,6 @@
 package com.tugasss.laundryapp.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,8 +8,10 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.database.FirebaseDatabase
 import com.tugasss.laundryapp.R
 import com.tugasss.laundryapp.modeldata.modelPelanggan
+import com.tugasss.laundryapp.pelanggan.TambahPelangganActivity
 
 class AdapterDataPelanggan(
     private val listPelanggan: ArrayList<modelPelanggan>) :
@@ -37,18 +40,15 @@ class AdapterDataPelanggan(
 
         }
         holder.btLihat.setOnClickListener {
-            // Inflate layout pop-up
             val dialogView = LayoutInflater.from(holder.itemView.context)
                 .inflate(R.layout.dialog_mod_pelanggan, null)
 
-            // Bikin AlertDialog
             val dialogBuilder = android.app.AlertDialog.Builder(holder.itemView.context)
                 .setView(dialogView)
-                .setCancelable(true) // Bisa ditutup dengan klik luar dialog
+                .setCancelable(true)
 
             val alertDialog = dialogBuilder.create()
 
-            // Binding komponen dalam popup
             val tvIdPelanggan = dialogView.findViewById<TextView>(R.id.tvID_PELANGGAN)
             val tvNamaPelanggan = dialogView.findViewById<TextView>(R.id.tvNAMA_PELANGGAN)
             val tvAlamatPelanggan = dialogView.findViewById<TextView>(R.id.tvALAMAT_PELANGGAN)
@@ -58,31 +58,34 @@ class AdapterDataPelanggan(
             val btEdit = dialogView.findViewById<Button>(R.id.btDIALOG_MOD_PELANGGAN_Edit)
             val btHapus = dialogView.findViewById<Button>(R.id.btDIALOG_MOD_PELANGGAN_Hapus)
 
-            // Set data pelanggan ke popup
             tvIdPelanggan.text = item.idPelanggan
             tvNamaPelanggan.text = item.namaPelanggan
             tvAlamatPelanggan.text = item.alamatPelanggan
             tvNoHPPelanggan.text = item.noHPPelanggan
             tvCabangPelanggan.text = item.idCabang
 
-            // Tombol edit dan hapus tinggal diset onClickListener kalau mau
             btEdit.setOnClickListener {
-                // Aksi edit
+                val context = holder.itemView.context
+                val intent = Intent(context, TambahPelangganActivity::class.java)
+                intent.putExtra("id", item.idPelanggan)
+                intent.putExtra("nama", item.namaPelanggan)
+                intent.putExtra("alamat", item.alamatPelanggan)
+                intent.putExtra("nohp", item.noHPPelanggan)
+                intent.putExtra("cabang", item.idCabang)
+                context.startActivity(intent)
+                alertDialog.dismiss()
             }
 
             btHapus.setOnClickListener {
-                // Hapus data dari list
                 val position = holder.adapterPosition
                 if (position != RecyclerView.NO_POSITION) {
                     listPelanggan.removeAt(position)
                     notifyItemRemoved(position)
 
-                    // Tutup dialog setelah hapus
                     alertDialog.dismiss()
                 }
             }
 
-            // Tampilkan dialog
             alertDialog.show()
         }
     }

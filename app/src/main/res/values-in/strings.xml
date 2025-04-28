@@ -34,4 +34,5 @@
     <string name="fill_nohp">No HP :</string>
     <string name="fill_cabang">Cabang :</string>
     <string name="activity_tambah_layanan">Tambah Layanan</string>
+    <string name="alamat_pegawai">Alamat</string>
 </resources>

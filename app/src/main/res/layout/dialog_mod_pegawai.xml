@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Detail Pegawai"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="24dp"
+                    android:paddingStart="4dp"
+                    android:paddingTop="4dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="?android:attr/colorButtonNormal">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="ID Pegawai"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/poppins"
+                        android:layout_weight="1.2"
+                        android:gravity="start"/>
+                    <TextView
+                        android:id="@+id/tvID_PEGAWAI"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="ID Pegawai"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/poppins"
+                        android:layout_weight="0.8"
+                        android:gravity="end"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="@string/nama_pegawai"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/poppins"
+                        android:layout_weight="1.2"
+                        android:gravity="start"/>
+                    <TextView
+                        android:id="@+id/tvNAMA_PEGAWAI"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="@string/nama_pegawai"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/poppins"
+                        android:layout_weight="0.8"
+                        android:gravity="end"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="?android:attr/colorButtonNormal">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:hint="@string/alamat_pegawai"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/poppins"
+                        android:layout_weight="1.2"
+                        android:gravity="start"/>
+                    <TextView
+                        android:id="@+id/tvALAMAT_PEGAWAI"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="3dp"
+                        android:hint="@string/alamat_pegawai"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/poppins"
+                        android:layout_weight="0.8"
+                        android:gravity="end"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="@string/cabang"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/poppins"
+                        android:layout_weight="1.2"
+                        android:gravity="start"/>
+                    <TextView
+                        android:id="@+id/tvCABANG"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="@string/cabang"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/poppins"
+                        android:layout_weight="0.8"
+                        android:gravity="end"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="?android:attr/colorButtonNormal">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="@string/no_hp"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/poppins"
+                        android:layout_weight="1.2"
+                        android:gravity="start"/>
+                    <TextView
+                        android:id="@+id/tvNO_HP"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="@string/no_hp"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/poppins"
+                        android:layout_weight="0.8"
+                        android:gravity="end"/>
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btDIALOG_MOD_PEGAWAI_Edit"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="5dp"
+                        app:backgroundTint="#FFC107"
+                        android:text="Sunting"
+                        app:icon="@drawable/baseline_edit_square_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/btDIALOG_MOD_PEGAWAI_Hapus"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <Button
+                        android:id="@+id/btDIALOG_MOD_PEGAWAI_Hapus"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="3dp"
+                        android:backgroundTint="#FF1D0D"
+                        android:text="Hapus"
+                        app:icon="@drawable/baseline_restore_from_trash_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/btDIALOG_MOD_PEGAWAI_Edit"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

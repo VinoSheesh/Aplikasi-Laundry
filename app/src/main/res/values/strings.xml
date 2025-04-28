@@ -33,4 +33,5 @@
     <string name="fill_nohp">Fill_nohp</string>
     <string name="fill_cabang">Fill_cabang</string>
     <string name="activity_tambah_layanan">Tambah_layanan</string>
+    <string name="alamat_pegawai">Alamat_pegawai</string>
 </resources>
