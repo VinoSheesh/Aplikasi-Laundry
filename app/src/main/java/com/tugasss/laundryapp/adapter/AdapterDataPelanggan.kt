@@ -12,6 +12,8 @@ import com.google.firebase.database.FirebaseDatabase
 import com.tugasss.laundryapp.R
 import com.tugasss.laundryapp.modeldata.modelPelanggan
 import com.tugasss.laundryapp.pelanggan.TambahPelangganActivity
+import android.widget.Toast
+
 
 class AdapterDataPelanggan(
     private val listPelanggan: ArrayList<modelPelanggan>) :
@@ -79,12 +81,22 @@ class AdapterDataPelanggan(
             btHapus.setOnClickListener {
                 val position = holder.adapterPosition
                 if (position != RecyclerView.NO_POSITION) {
-                    listPelanggan.removeAt(position)
-                    notifyItemRemoved(position)
+                    val idPelanggan = listPelanggan[position].idPelanggan
 
-                    alertDialog.dismiss()
+                    val database = com.google.firebase.database.FirebaseDatabase.getInstance()
+                    val pelangganRef = database.getReference("Pelanggan").child(idPelanggan ?: "")
+
+                    pelangganRef.removeValue().addOnSuccessListener {
+                        listPelanggan.removeAt(position)
+                        notifyItemRemoved(position)
+                        Toast.makeText(holder.itemView.context, "Data pelanggan berhasil dihapus", Toast.LENGTH_SHORT).show()
+                        alertDialog.dismiss()
+                    }.addOnFailureListener {
+                        Toast.makeText(holder.itemView.context, "Gagal menghapus data pelanggan", Toast.LENGTH_SHORT).show()
+                    }
                 }
             }
+
 
             alertDialog.show()
         }

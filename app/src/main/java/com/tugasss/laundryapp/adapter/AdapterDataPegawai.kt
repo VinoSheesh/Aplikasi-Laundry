@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.tugasss.laundryapp.R
 import com.tugasss.laundryapp.modeldata.modelPegawai
 import com.tugasss.laundryapp.pegawai.TambahPegawaiActivity
+import android.widget.Toast
 
 class AdapterDataPegawai(
     private val listPegawai: ArrayList<modelPegawai>
@@ -79,9 +80,19 @@ class AdapterDataPegawai(
             btHapus.setOnClickListener {
                 val position = holder.adapterPosition
                 if (position != RecyclerView.NO_POSITION) {
-                    listPegawai.removeAt(position)
-                    notifyItemRemoved(position)
-                    alertDialog.dismiss()
+                    val idPegawai = listPegawai[position].idPegawai
+
+                    val database = com.google.firebase.database.FirebaseDatabase.getInstance()
+                    val pegawaiRef = database.getReference("Pegawai").child(idPegawai ?: "")
+
+                    pegawaiRef.removeValue().addOnSuccessListener {
+                        listPegawai.removeAt(position)
+                        notifyItemRemoved(position)
+                        Toast.makeText(holder.itemView.context, "Data pegawai berhasil dihapus", Toast.LENGTH_SHORT).show()
+                        alertDialog.dismiss()
+                    }.addOnFailureListener {
+                        Toast.makeText(holder.itemView.context, "Gagal menghapus data pegawai", Toast.LENGTH_SHORT).show()
+                    }
                 }
             }
 
