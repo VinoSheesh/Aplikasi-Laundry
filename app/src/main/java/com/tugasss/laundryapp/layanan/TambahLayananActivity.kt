@@ -52,19 +52,19 @@ class TambahLayananActivity : AppCompatActivity() {
 
         if (nama.isEmpty()) {
             etNama.error = this.getString(R.string.validasi_nama_pegawai)
-            Toast.makeText(this, this.getString(R.string.validasi_nama_pegawai),Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, this.getString(R.string.validasi_nama_layanan),Toast.LENGTH_SHORT).show()
             etNama.requestFocus()
             return
         }
         if (harga.isEmpty()) {
             etHarga.error = this.getString(R.string.validasi_nohp_pegawai)
-            Toast.makeText(this, this.getString(R.string.validasi_alamat_pegawai),Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, this.getString(R.string.validasi_harga_layanan),Toast.LENGTH_SHORT).show()
             etHarga.requestFocus()
             return
         }
         if (cabang.isEmpty()) {
             etCabang.error = this.getString(R.string.validasi_cabang_pegawai)
-            Toast.makeText(this, this.getString(R.string.validasi_alamat_pegawai),Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, this.getString(R.string.validasi_cabang_layanan),Toast.LENGTH_SHORT).show()
             etCabang.requestFocus()
             return
         }

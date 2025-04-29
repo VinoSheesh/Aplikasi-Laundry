@@ -35,4 +35,7 @@
     <string name="fill_cabang">Cabang :</string>
     <string name="activity_tambah_layanan">Tambah Layanan</string>
     <string name="alamat_pegawai">Alamat</string>
+    <string name="validasi_nama_layanan">Nama Layanan tidak boleh kosong</string>
+    <string name="validasi_harga_layanan">Harga Layanan tidak boleh kosong</string>
+    <string name="validasi_cabang_layanan">Cabang Layanan tidak boleh kosong</string>
 </resources>

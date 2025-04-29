@@ -36,7 +36,7 @@ class AdapterDataPegawai(
         holder.tvCabang.text = item.idCabang
 
         holder.btHubungi.setOnClickListener {
-            // Tambahkan aksi hubungi kalau mau, misal panggil nomor
+
         }
 
         holder.btLihat.setOnClickListener {

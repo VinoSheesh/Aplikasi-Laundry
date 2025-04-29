@@ -35,4 +35,7 @@
     <string name="fill_cabang">Branch :</string>
     <string name="activity_tambah_layanan">Add Services</string>
     <string name="alamat_pegawai">Adress</string>
+    <string name="validasi_nama_layanan">Service Name Can\'t be empty</string>
+    <string name="validasi_harga_layanan">Service Cost Can\'t be empty</string>
+    <string name="validasi_cabang_layanan">Service Branch Can\'t be empty</string>
 </resources>

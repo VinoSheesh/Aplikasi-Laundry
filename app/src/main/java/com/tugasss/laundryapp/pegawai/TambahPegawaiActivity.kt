@@ -65,18 +65,15 @@ class TambahPegawaiActivity : AppCompatActivity() {
         etNoHP.setText(hp)
         etCabang.setText(cabang)
 
-        // Memastikan mode tambah atau edit
         if (judul != null && judul != getString(R.string.activity_tambah_pegawai)) {
             if (judul == "Edit Pegawai") {
                 btSimpan.text = "Sunting"
-                // Aktifkan inputan langsung saat edit
                 hidup()
             }
         } else {
             btSimpan.text = "Simpan"
-            // Aktifkan inputan saat tambah pegawai
             hidup()
-            etNama.requestFocus()  // Fokus ke input nama
+            etNama.requestFocus()
         }
     }
 
@@ -141,17 +138,16 @@ class TambahPegawaiActivity : AppCompatActivity() {
             return
         }
 
-        // Cek tombol jika sedang dalam mode edit
         when (btSimpan.text.toString()) {
             "Sunting" -> {
                 btSimpan.text = "Update"
-                hidup()  // Mengaktifkan input untuk edit
+                hidup()
             }
             "Update" -> {
-                update()  // Memperbarui data
+                update()
             }
             "Simpan" -> {
-                simpan()  // Menyimpan data baru
+                simpan()
             }
         }
     }
