@@ -11,6 +11,7 @@ import android.widget.TextView
 import com.tugasss.laundryapp.layanan.DataLayananActivity
 import com.tugasss.laundryapp.pegawai.Activity_data_pegawai
 import com.tugasss.laundryapp.pelanggan.DataPelangganActivity
+import com.tugasss.laundryapp.transaksi.transaksi
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -35,6 +36,12 @@ class HomeActivity : AppCompatActivity() {
             val intent = Intent(this, DataLayananActivity::class.java)
             startActivity(intent)
         }
+        val transaksiLayout = findViewById<LinearLayout>(R.id.TRANSAKSI)
+        transaksiLayout.setOnClickListener{
+            val intent = Intent(this, transaksi::class.java)
+            startActivity(intent)
+        }
+
 
         val greetingTextView: TextView = findViewById(R.id.greetingTextView)
         val dateTextView: TextView = findViewById(R.id.dateTextView)

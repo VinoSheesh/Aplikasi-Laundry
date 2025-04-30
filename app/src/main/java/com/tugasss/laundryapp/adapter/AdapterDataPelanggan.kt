@@ -82,20 +82,37 @@ class AdapterDataPelanggan(
                 val position = holder.adapterPosition
                 if (position != RecyclerView.NO_POSITION) {
                     val idPelanggan = listPelanggan[position].idPelanggan
+                    if (!idPelanggan.isNullOrEmpty()) {
+                        val database = FirebaseDatabase.getInstance()
+                        val pelangganRef = database.getReference("Pelanggan").child(idPelanggan)
 
-                    val database = com.google.firebase.database.FirebaseDatabase.getInstance()
-                    val pelangganRef = database.getReference("Pelanggan").child(idPelanggan ?: "")
+                        // Tampilkan dialog konfirmasi
+                        android.app.AlertDialog.Builder(holder.itemView.context)
+                            .setTitle("Konfirmasi Hapus")
+                            .setMessage("Apakah Anda yakin ingin menghapus data pelanggan ini?")
+                            .setPositiveButton("Ya") { _, _ ->
+                                // Tambahkan loading indicator jika diperlukan
 
-                    pelangganRef.removeValue().addOnSuccessListener {
-                        listPelanggan.removeAt(position)
-                        notifyItemRemoved(position)
-                        Toast.makeText(holder.itemView.context, "Data pelanggan berhasil dihapus", Toast.LENGTH_SHORT).show()
-                        alertDialog.dismiss()
-                    }.addOnFailureListener {
-                        Toast.makeText(holder.itemView.context, "Gagal menghapus data pelanggan", Toast.LENGTH_SHORT).show()
+                                pelangganRef.removeValue().addOnSuccessListener {
+                                    // Hapus dari list lokal
+                                    listPelanggan.removeAt(position)
+                                    notifyItemRemoved(position)
+                                    notifyItemRangeChanged(position, listPelanggan.size)
+
+                                    Toast.makeText(holder.itemView.context, "Data berhasil dihapus", Toast.LENGTH_SHORT).show()
+                                    alertDialog.dismiss()
+                                }.addOnFailureListener {
+                                    Toast.makeText(holder.itemView.context, "Gagal menghapus data: ${it.message}", Toast.LENGTH_SHORT).show()
+                                }
+                            }
+                            .setNegativeButton("Tidak") { dialog, _ ->
+                                dialog.dismiss()
+                            }
+                            .show()
                     }
                 }
             }
+
 
 
             alertDialog.show()
