@@ -37,7 +37,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tvCustomerNameLabel"
+                android:id="@+id/tvNAMA_PELANGGAN"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
@@ -48,7 +48,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvCustomerDataTitle" />
 
             <TextView
-                android:id="@+id/tvPhoneNumberLabel"
+                android:id="@+id/tvNO_HP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
@@ -56,10 +56,10 @@
                 android:textColor="@color/dark_gray"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvCustomerNameLabel" />
+                app:layout_constraintTop_toBottomOf="@+id/tvNAMA_PELANGGAN" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnSelectCustomer"
+                android:id="@+id/btPILIH_PELANGGAN"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/dark_gray"
@@ -72,9 +72,8 @@
                 app:cornerRadius="24dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvPhoneNumberLabel" />
+                app:layout_constraintTop_toBottomOf="@+id/tvNO_HP" />
 
-            <!-- Main Service Section -->
             <TextView
                 android:id="@+id/tvMainServiceTitle"
                 android:layout_width="wrap_content"
@@ -84,10 +83,10 @@
                 android:textColor="@color/dark_gray"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnSelectCustomer" />
+                app:layout_constraintTop_toBottomOf="@+id/btPILIH_PELANGGAN" />
 
             <TextView
-                android:id="@+id/tvServiceNameLabel"
+                android:id="@+id/tvNAMA_LAYANAN"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
@@ -98,7 +97,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvMainServiceTitle" />
 
             <TextView
-                android:id="@+id/tvPriceLabel"
+                android:id="@+id/tvHARGA_LAYANAN"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
@@ -106,10 +105,10 @@
                 android:textColor="@color/dark_gray"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvServiceNameLabel" />
+                app:layout_constraintTop_toBottomOf="@+id/tvNAMA_LAYANAN" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnSelectService"
+                android:id="@+id/btPILIH_LAYANAN"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/dark_gray"
@@ -122,7 +121,7 @@
                 app:cornerRadius="24dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvPriceLabel" />
+                app:layout_constraintTop_toBottomOf="@+id/tvHARGA_LAYANAN" />
 
             <TextView
                 android:id="@+id/tvAdditionalServiceTitle"
@@ -134,13 +133,14 @@
                 android:textColor="@color/dark_gray"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnSelectService" />
+                app:layout_constraintTop_toBottomOf="@+id/btPILIH_LAYANAN" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLAYANAN_TAMBAHAN"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
@@ -162,7 +162,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnAdditional"
+            android:id="@+id/btTAMBAHAN"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -177,7 +177,7 @@
             app:cornerRadius="24dp" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnProcess"
+            android:id="@+id/btPROSES"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"

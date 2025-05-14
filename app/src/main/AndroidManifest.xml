@@ -8,12 +8,21 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/mesincuci"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/mesincuci"
         android:supportsRtl="true"
         android:theme="@style/Theme.LaundryApp"
         tools:targetApi="31">
+        <activity
+            android:name=".transaksi.Activity_pilih_layanan_tambahan"
+            android:exported="false" />
+        <activity
+            android:name=".transaksi.activity_pilih_layanan"
+            android:exported="false" />
+        <activity
+            android:name=".transaksi.activity_pilih_pelanggan"
+            android:exported="false" />
         <activity
             android:name=".transaksi.transaksi"
             android:exported="false" />
