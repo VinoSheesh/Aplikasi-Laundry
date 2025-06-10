@@ -1,179 +1,255 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_light"
     tools:context=".pegawai.TambahPegawaiActivity">
 
-    <TextView
-        android:id="@+id/tvTAMBAH_PEGAWAI"
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:fontFamily="@font/poppins_semibold"
-        android:text="@string/activity_tambah_pegawai"
-        android:textAlignment="center"
-        android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="12dp"
+        android:gravity="center_vertical">
 
-    <LinearLayout
+        <ImageView
+            android:id="@+id/Back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/baseline_arrow_back_24"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/tvJudulHalaman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/Back"
+            android:fontFamily="@font/nunito"
+            android:text="@string/activity_tambah_pegawai"
+            android:textAlignment="center"
+            android:textColor="@color/text_primary"
+            android:textFontWeight="700"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/text_secondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/relativeLayout2" />
+
+    <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="12dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/btSIMPAN"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTAMBAH_PEGAWAI"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
 
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
 
-                <TextView
-                    android:id="@+id/tvNAMA_LENGKAP"
+                <!-- Kolom Kiri -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingEnd="8dp">
+
+                    <TextView
+                        android:id="@+id/tvNAMA_LENGKAP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:fontFamily="@font/nunito_medium"
+                        android:text="@string/nama_lengkap"
+                        style="@style/FontUtama"/>
+
+                    <EditText
+                        android:id="@+id/etNAMA_LENGKAP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/etborder"
+                        android:drawableStart="@drawable/baseline_person_24"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="@font/nunito_medium"
+                        android:hint="@string/nama_lengkap"
+                        android:minHeight="48dp"
+                        android:padding="8dp" />
+
+                    <TextView
+                        android:id="@+id/tvALAMAT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/nunito_medium"
+                        android:text="@string/alamat_pegawai"
+                        style="@style/FontUtama"/>
+
+                    <EditText
+                        android:id="@+id/etALAMAT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/etborder"
+                        android:drawableStart="@drawable/baseline_location_on_24"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="@font/nunito_medium"
+                        android:hint="@string/alamat_pegawai"
+                        android:minHeight="48dp"
+                        android:padding="8dp" />
+
+                </LinearLayout>
+
+                <!-- Kolom Kanan -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="8dp">
+
+                    <TextView
+                        android:id="@+id/tvNO_HP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:fontFamily="@font/nunito_medium"
+                        android:text="@string/no_hp"
+                        style="@style/FontUtama"/>
+
+                    <EditText
+                        android:id="@+id/etNO_HP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/etborder"
+                        android:drawableStart="@drawable/baseline_phone_24"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="@font/nunito_medium"
+                        android:hint="@string/no_hp"
+                        android:inputType="phone"
+                        android:maxLength="13"
+                        android:minHeight="48dp"
+                        android:padding="8dp" />
+
+                    <TextView
+                        android:id="@+id/tvBRANCH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="20dp"
+                        android:fontFamily="@font/nunito_medium"
+                        android:text="@string/cabang"
+                        style="@style/FontUtama"/>
+
+                    <Spinner
+                        android:id="@+id/spinnerCabang"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/etborder"
+                        android:minHeight="48dp"
+                        android:padding="8dp"
+                        android:fontFamily="@font/nunito_medium" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Jenis Kelamin (Full Width) -->
+            <TextView
+                android:id="@+id/tvJENIS_KELAMIN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/nunito_medium"
+                android:text="@string/gender"
+                style="@style/FontUtama"/>
+
+            <RadioGroup
+                android:id="@+id/rgJENIS_KELAMIN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbPRIA"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="20dp"
-                    android:fontFamily="@font/poppins"
-                    android:text="@string/nama_lengkap" />
-
-                <EditText
-                    android:id="@+id/etNAMA_LENGKAP"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tvNAMA_LENGKAP"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="20dp"
-                    android:background="@drawable/etborder"
-                    android:drawableStart="@drawable/baseline_person_24"
-                    android:drawablePadding="4dp"
-                    android:fontFamily="@font/poppins"
-                    android:hint="@string/nama_lengkap"
+                    android:text="@string/pria"
+                    android:fontFamily="@font/nunito_medium"
                     android:minHeight="48dp" />
 
-                <TextView
-                    android:id="@+id/tvALAMAT"
+                <RadioButton
+                    android:id="@+id/rbWANITA"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/etNAMA_LENGKAP"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/poppins"
-                    android:text="@string/alamat_pelanggan" />
-
-                <EditText
-                    android:id="@+id/etALAMAT"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tvALAMAT"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="20dp"
-                    android:background="@drawable/etborder"
-                    android:drawableStart="@drawable/baseline_location_on_24"
-                    android:drawablePadding="4dp"
-                    android:fontFamily="@font/poppins"
-                    android:hint="@string/alamat_pelanggan"
+                    android:text="@string/wanita"
+                    android:fontFamily="@font/nunito_medium"
+                    android:layout_marginStart="16dp"
                     android:minHeight="48dp" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-
-                <TextView
-                    android:id="@+id/tvNO_HP"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="20dp"
-                    android:fontFamily="@font/poppins"
-                    android:text="@string/no_hp" />
-
-                <EditText
-                    android:id="@+id/etNO_HP"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tvNO_HP"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="20dp"
-                    android:background="@drawable/etborder"
-                    android:drawableStart="@drawable/baseline_phone_24"
-                    android:drawablePadding="4dp"
-                    android:fontFamily="@font/poppins"
-                    android:hint="@string/no_hp"
-                    android:inputType="phone"
-                    android:minHeight="48dp"
-                    android:maxLength="13"/>
-
-                <TextView
-                    android:id="@+id/tvBRANCH"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/etNO_HP"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="20dp"
-                    android:fontFamily="@font/poppins"
-                    android:text="@string/cabang" />
-
-                <EditText
-                    android:id="@+id/etBRANCH"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tvBRANCH"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="20dp"
-                    android:background="@drawable/etborder"
-                    android:drawableStart="@drawable/baseline_storefront_24"
-                    android:drawablePadding="4dp"
-                    android:fontFamily="@font/poppins"
-                    android:hint="@string/cabang"
-                    android:inputType="text"
-                    android:minHeight="48dp" />
-            </RelativeLayout>
+            </RadioGroup>
 
         </LinearLayout>
+    </ScrollView>
 
-        <Button
-            android:id="@+id/btSIMPAN"
-            style="@style/Tombol1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/etBRANCH"
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="20dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:paddingStart="44dp"
-            android:paddingEnd="44dp"
-            android:text="@string/simpan"
-            android:textSize="16sp" />
-
-
-    </LinearLayout>
+    <Button
+        android:id="@+id/btSIMPAN"
+        style="@style/Tombol1"
+        android:backgroundTint="@color/accent_yellow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/nunito_medium"
+        android:text="@string/simpan"
+        android:textFontWeight="800"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:textSize="18sp"
+        android:textColor="#443000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cornerRadius="8dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

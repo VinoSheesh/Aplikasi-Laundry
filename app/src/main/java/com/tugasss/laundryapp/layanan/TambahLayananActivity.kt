@@ -5,6 +5,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Button
 import android.widget.Toast
+import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -19,17 +20,42 @@ class TambahLayananActivity : AppCompatActivity() {
     lateinit var tvJudul: TextView
     lateinit var etNama: EditText
     lateinit var etHarga: EditText
-    lateinit var etCabang: EditText
+    lateinit var etDurasi: EditText
     lateinit var btSimpan: Button
+    lateinit var backButton: ImageView
+
+    var layananId: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_tambah_layanan)
         init()
+
+        val dataIntent = intent
+        if (dataIntent != null) {
+            layananId = dataIntent.getStringExtra("id")
+            val nama = dataIntent.getStringExtra("nama")
+            val harga = dataIntent.getStringExtra("harga")
+            val durasi = dataIntent.getStringExtra("durasi")
+
+            if (layananId != null) {
+                tvJudul.text = "Edit Data Layanan"
+                btSimpan.text = "Update"
+                etNama.setText(nama)
+                etHarga.setText(harga)
+                etDurasi.setText(durasi)
+            }
+        }
+
         btSimpan.setOnClickListener{
             cekValidasi()
         }
+
+        backButton.setOnClickListener {
+            finish()
+        }
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -38,37 +64,45 @@ class TambahLayananActivity : AppCompatActivity() {
     }
 
     fun init() {
-        tvJudul = findViewById(R.id.tvTAMBAH_LAYANAN)
+        tvJudul = findViewById(R.id.tvJudulHalaman)
         etNama = findViewById(R.id.etNAMA_LAYANAN)
         etHarga = findViewById(R.id.etHARGA)
-        etCabang = findViewById(R.id.etBRANCH)
+        etDurasi = findViewById(R.id.etDURASI)
         btSimpan = findViewById(R.id.btSIMPAN)
+        backButton = findViewById(R.id.Back)
+        // Hapus baris: etCabang = findViewById(R.id.etBRANCH)
     }
 
     fun cekValidasi() {
         val nama = etNama.text.toString()
         val harga = etHarga.text.toString()
-        val cabang = etCabang.text.toString()
+        val durasi = etDurasi.text.toString()
 
         if (nama.isEmpty()) {
-            etNama.error = this.getString(R.string.validasi_nama_pegawai)
-            Toast.makeText(this, this.getString(R.string.validasi_nama_layanan),Toast.LENGTH_SHORT).show()
+            etNama.error = "Nama layanan harus diisi"
+            Toast.makeText(this, "Nama layanan harus diisi", Toast.LENGTH_SHORT).show()
             etNama.requestFocus()
             return
         }
         if (harga.isEmpty()) {
-            etHarga.error = this.getString(R.string.validasi_nohp_pegawai)
-            Toast.makeText(this, this.getString(R.string.validasi_harga_layanan),Toast.LENGTH_SHORT).show()
+            etHarga.error = "Harga layanan harus diisi"
+            Toast.makeText(this, "Harga layanan harus diisi", Toast.LENGTH_SHORT).show()
             etHarga.requestFocus()
             return
         }
-        if (cabang.isEmpty()) {
-            etCabang.error = this.getString(R.string.validasi_cabang_pegawai)
-            Toast.makeText(this, this.getString(R.string.validasi_cabang_layanan),Toast.LENGTH_SHORT).show()
-            etCabang.requestFocus()
+        if (durasi.isEmpty()) {
+            etDurasi.error = "Durasi harus diisi"
+            Toast.makeText(this, "Durasi harus diisi", Toast.LENGTH_SHORT).show()
+            etDurasi.requestFocus()
             return
         }
-        simpan()
+        // Hapus validasi cabang
+
+        if (layananId == null) {
+            simpan()
+        } else {
+            update()
+        }
     }
 
     fun simpan() {
@@ -78,23 +112,42 @@ class TambahLayananActivity : AppCompatActivity() {
             layananid.toString(),
             etNama.text.toString(),
             etHarga.text.toString(),
-            etCabang.text.toString(),
+            "", // Atau hapus parameter cabang jika tidak digunakan dalam model
+            etDurasi.text.toString()
         )
         layananBaru.setValue(data)
             .addOnSuccessListener {
                 Toast.makeText(
                     this,
-                    this.getString(R.string.sukes_simpan_pegawai),
+                    "Data layanan berhasil disimpan",
                     Toast.LENGTH_SHORT
-                )
+                ).show()
                 finish()
             }
             .addOnFailureListener {
                 Toast.makeText(
                     this,
-                    this.getString(R.string.gagal_simpan_pegawai),
+                    "Gagal menyimpan data layanan",
                     Toast.LENGTH_SHORT
-                )
+                ).show()
+            }
+    }
+
+    fun update() {
+        val dataUpdate = mapOf(
+            "namaLayanan" to etNama.text.toString(),
+            "hargaLayanan" to etHarga.text.toString(),
+            "durasi" to etDurasi.text.toString()
+            // Hapus: "idCabang" to etCabang.text.toString()
+        )
+
+        myRef.child(layananId ?: "").updateChildren(dataUpdate)
+            .addOnSuccessListener {
+                Toast.makeText(this, "Berhasil update data layanan", Toast.LENGTH_SHORT).show()
+                finish()
+            }
+            .addOnFailureListener {
+                Toast.makeText(this, "Gagal update data layanan", Toast.LENGTH_SHORT).show()
             }
     }
 }

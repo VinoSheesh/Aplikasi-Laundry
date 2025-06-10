@@ -1,112 +1,169 @@
 package com.tugasss.laundryapp.adapter
 
-import android.app.AlertDialog
+import android.app.Dialog
+import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
-import androidx.cardview.widget.CardView
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.button.MaterialButton
+import com.google.firebase.database.FirebaseDatabase
 import com.tugasss.laundryapp.R
 import com.tugasss.laundryapp.modeldata.modelLayanan
-import com.tugasss.laundryapp.pelanggan.TambahPelangganActivity
-import android.widget.Toast
+import com.tugasss.laundryapp.layanan.TambahLayananActivity
 
-class AdapterDataLayanan(
-    private val listlayanan: ArrayList<modelLayanan>) :
+class AdapterDataLayanan(private var layananList: ArrayList<modelLayanan>) :
     RecyclerView.Adapter<AdapterDataLayanan.ViewHolder>() {
-    override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int
-    ): ViewHolder {
+
+    private val database = FirebaseDatabase.getInstance()
+    private val myRef = database.getReference("layanan")
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.card_data_layanan, parent, false)
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = listlayanan[position]
-        holder.tvID.text = item.idLayanan
-        holder.tvLayanan.text = item.namaLayanan
-        holder.tvHargaLayanan.text = item.hargaLayanan
-        holder.tvCabang.text = item.idCabang
+        val layanan = layananList[position]
+        val context = holder.itemView.context
 
-        holder.cvCARD.setOnClickListener {
+        // Bind data ke views menggunakan string resources
+        holder.tvIdLayanan.text = layanan.idLayanan ?: ""
+        holder.tvNamaLayanan.text = layanan.namaLayanan ?: context.getString(R.string.nama_tidak_tersedia)
+        holder.tvHargaLayanan.text = context.getString(R.string.harga_format, layanan.hargaLayanan ?: "0")
+        holder.tvDurasi.text = context.getString(R.string.durasi_format, layanan.durasi ?: "0")
 
-        }
-        holder.btHubungi.setOnClickListener{
-
-        }
+        // Set click listener untuk tombol opsi - menampilkan dialog detail
         holder.btLihat.setOnClickListener {
-            val dialogView = LayoutInflater.from(holder.itemView.context)
-                .inflate(R.layout.dialog_mod_layanan, null)
+            showDetailDialog(context, layanan, position)
+        }
+    }
 
-            val dialogBuilder = AlertDialog.Builder(holder.itemView.context)
-                .setView(dialogView)
-                .setCancelable(true)
+    private fun showDetailDialog(context: Context, layanan: modelLayanan, position: Int) {
+        try {
+            // Inflate layout dialog detail
+            val dialogView = LayoutInflater.from(context).inflate(R.layout.dialog_mod_layanan, null)
 
-            val alertDialog = dialogBuilder.create()
-
+            // Inisialisasi views dari dialog
             val tvIdLayanan = dialogView.findViewById<TextView>(R.id.tvID_LAYANAN)
             val tvNamaLayanan = dialogView.findViewById<TextView>(R.id.tvNAMA_LAYANAN)
             val tvHargaLayanan = dialogView.findViewById<TextView>(R.id.tvHARGA_LAYANAN)
-            val tvCabangPelanggan = dialogView.findViewById<TextView>(R.id.tvCABANG)
-
-            val btEdit = dialogView.findViewById<Button>(R.id.btDIALOG_MOD_LAYANAN_Edit)
+            val tvDurasi = dialogView.findViewById<TextView>(R.id.tvDURASI)
+            val btEdit = dialogView.findViewById<MaterialButton>(R.id.btDIALOG_MOD_LAYANAN_Edit)
             val btHapus = dialogView.findViewById<Button>(R.id.btDIALOG_MOD_LAYANAN_Hapus)
 
-            tvIdLayanan.text = item.idLayanan
-            tvNamaLayanan.text = item.namaLayanan
-            tvHargaLayanan.text = item.hargaLayanan
-            tvCabangPelanggan.text = item.idCabang
+            // Set data to dialog views menggunakan string resources
+            tvIdLayanan.text = layanan.idLayanan ?: ""
+            tvNamaLayanan.text = layanan.namaLayanan ?: context.getString(R.string.nama_tidak_tersedia)
+            tvHargaLayanan.text = context.getString(R.string.harga_format, layanan.hargaLayanan ?: "0")
+            tvDurasi.text = context.getString(R.string.durasi_format, layanan.durasi ?: "0")
 
+            // Create dialog
+            val dialog = Dialog(context)
+            dialog.setContentView(dialogView)
+            dialog.window?.setLayout(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            )
+            dialog.setCancelable(true) // Allow dismiss by back button or outside touch
+
+            // Set click listeners untuk tombol di dialog
             btEdit.setOnClickListener {
-                val context = holder.itemView.context
-                val intent = Intent(context, TambahPelangganActivity::class.java)
-                intent.putExtra("id", item.idLayanan)
-                intent.putExtra("nama", item.namaLayanan)
-                intent.putExtra("harga", item.hargaLayanan)
-                intent.putExtra("cabang", item.idCabang)
-                context.startActivity(intent)
-                alertDialog.dismiss()
+                dialog.dismiss()
+                editLayanan(context, layanan)
             }
 
             btHapus.setOnClickListener {
-                val position = holder.adapterPosition
-                if (position != RecyclerView.NO_POSITION) {
-                    val idLayanan = listlayanan[position].idLayanan
-
-                    val database = com.google.firebase.database.FirebaseDatabase.getInstance()
-                    val layananRef = database.getReference("Layanan").child(idLayanan ?: "")
-
-                    layananRef.removeValue().addOnSuccessListener {
-                        listlayanan.removeAt(position)
-                        notifyItemRemoved(position)
-                        Toast.makeText(holder.itemView.context, "Data layanan berhasil dihapus", Toast.LENGTH_SHORT).show()
-                        alertDialog.dismiss()
-                    }.addOnFailureListener {
-                        Toast.makeText(holder.itemView.context, "Gagal menghapus data layanan", Toast.LENGTH_SHORT).show()
-                    }
-                }
+                dialog.dismiss()
+                showDeleteDialog(context, layanan, position)
             }
 
-            alertDialog.show()
+            dialog.show()
+
+        } catch (e: Exception) {
+            Toast.makeText(
+                context,
+                context.getString(R.string.error_dialog, e.message),
+                Toast.LENGTH_SHORT
+            ).show()
         }
     }
 
-    override fun getItemCount(): Int {
-        return listlayanan.size
+    private fun editLayanan(context: Context, layanan: modelLayanan) {
+        val intent = Intent(context, TambahLayananActivity::class.java).apply {
+            putExtra(context.getString(R.string.extra_id), layanan.idLayanan)
+            putExtra(context.getString(R.string.extra_nama), layanan.namaLayanan)
+            putExtra(context.getString(R.string.extra_harga), layanan.hargaLayanan)
+            putExtra(context.getString(R.string.extra_durasi), layanan.durasi)
+            putExtra(context.getString(R.string.extra_mode), context.getString(R.string.mode_edit))
+        }
+        context.startActivity(intent)
     }
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        val tvID: TextView = itemView.findViewById(R.id.tvID_LAYANAN)
-        val tvLayanan: TextView = itemView.findViewById(R.id.tvNAMA_LAYANAN)
+    private fun showDeleteDialog(context: Context, layanan: modelLayanan, position: Int) {
+        AlertDialog.Builder(context)
+            .setTitle(context.getString(R.string.hapus_layanan))
+            .setMessage(context.getString(R.string.konfirmasi_hapus_layanan, layanan.namaLayanan))
+            .setPositiveButton(context.getString(R.string.ya)) { _, _ ->
+                deleteLayanan(context, layanan, position)
+            }
+            .setNegativeButton(context.getString(R.string.tidak), null)
+            .setCancelable(true)
+            .show()
+    }
+
+    private fun deleteLayanan(context: Context, layanan: modelLayanan, position: Int) {
+        layanan.idLayanan?.let { id ->
+            myRef.child(id).removeValue()
+                .addOnSuccessListener {
+                    // Update list dan notify adapter
+                    if (position < layananList.size) {
+                        layananList.removeAt(position)
+                        notifyItemRemoved(position)
+                        notifyItemRangeChanged(position, layananList.size)
+                    }
+                    Toast.makeText(
+                        context,
+                        context.getString(R.string.layanan_berhasil_dihapus),
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+                .addOnFailureListener { exception ->
+                    Toast.makeText(
+                        context,
+                        context.getString(R.string.gagal_menghapus_layanan, exception.message),
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+        } ?: run {
+            Toast.makeText(
+                context,
+                context.getString(R.string.id_layanan_tidak_valid),
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+    }
+
+    override fun getItemCount(): Int = layananList.size
+
+    fun updateData(newList: ArrayList<modelLayanan>) {
+        layananList.clear()
+        layananList.addAll(newList)
+        notifyDataSetChanged()
+    }
+
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val tvIdLayanan: TextView = itemView.findViewById(R.id.tvID_LAYANAN)
+        val tvNamaLayanan: TextView = itemView.findViewById(R.id.tvNAMA_LAYANAN)
         val tvHargaLayanan: TextView = itemView.findViewById(R.id.tvHARGA_LAYANAN)
-        val tvCabang: TextView = itemView.findViewById(R.id.tvCABANG)
-        val cvCARD: CardView = itemView.findViewById(R.id.cvCARD_LAYANAN)
-        val btHubungi: Button = itemView.findViewById(R.id.btHUBUNGI)
-        val btLihat: Button = itemView.findViewById(R.id.btLIHAT)
+        val tvDurasi: TextView = itemView.findViewById(R.id.tvDURASI)
+        val btLihat: androidx.cardview.widget.CardView = itemView.findViewById(R.id.btLIHAT)
     }
 }

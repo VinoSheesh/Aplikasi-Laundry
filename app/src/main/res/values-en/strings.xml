@@ -38,4 +38,416 @@
     <string name="validasi_nama_layanan">Service Name Can\'t be empty</string>
     <string name="validasi_harga_layanan">Service Cost Can\'t be empty</string>
     <string name="validasi_cabang_layanan">Service Branch Can\'t be empty</string>
+    <string name="transaksi">Transaction</string>
+    <string name="datapelanggan">Customer Data</string>
+    <string name="namapelangganoutput">Customer Name:</string>
+    <string name="nohppelangganoutput">Phone Number:</string>
+    <string name="pilihpelanggan">Choose Customer</string>
+    <string name="pilihlayanan">Choose Service</string>
+    <string name="namalayanan">Service Name:</string>
+    <string name="hargalayanan">Service Cost:</string>
+    <string name="layananutama">Main Service</string>
+    <string name="layanantambahan">Add-on Service</string>
+    <string name="tambahan">Add-on</string>
+    <string name="proses">Proceed</string>
+    <string name="opsional">Optional</string>
+    <string name="konfirmasitransaksi">Transaction Confirmation</string>
+    <string name="informasilayanan">Service Information</string>
+    <string name="pegawaiyangmenangani">"Employee "</string>
+    <string name="totalbayar">Cost Total</string>
+    <string name="batal">Cancel</string>
+    <string name="pembayaran">Payment</string>
+    <string name="invoicetransaksi">Transaction Invoice</string>
+    <string name="informasitransaksi">Transaction Information</string>
+    <string name="idtransaksi">Transaction ID</string>
+    <string name="tanggaldanwaktu">Date &amp; Time</string>
+    <string name="metodepembayaran">Payment Method</string>
+    <string name="detaillayanan">Service Detail</string>
+    <string name="subtotaltambahan">Add-on SubTotal</string>
+    <string name="terimakasih">Thank you for using Vinn Laundry Service</string>
+    <string name="kirimwhatsapp">📱 Send WhatsApp</string>
+    <string name="cetakstruk">🖨️ Print Receipt</string>
+    <string name="pelanggan">Customer</string>
+    <string name="pegawai">Employee</string>
+    <string name="layanan">Service</string>
+    <string name="laporan">Report</string>
+    <string name="tambahcabang">+ Add Branch</string>
+    <string name="profilsaya">My Profile</string>
+    <string name="kelolainformasi">Manage Your Account information</string>
+    <string name="informasiakun">Account Information</string>
+    <string name="editprofil">Profile Edit</string>
+    <string name="editprofilinfo">Change Your Profile Information</string>
+    <string name="akun">Account</string>
+    <string name="pengaturan">Settings</string>
+    <string name="pengaturaninfo">Manage Account Preference</string>
+    <string name="logout">Log Out</string>
+    <string name="halo">Hello,</string>
+    <string name="selamatdatang">Welcome!</string>
+    <string name="lengkapidata">Please fill the data below to login</string>
+    <string name="masuk">Login</string>
+    <string name="belumpunyaakun">Don\'t have account yet? register here</string>
+    <string name="haloselamatdatang">Hello, Welcome!</string>
+    <string name="pilihtambahan">Choose Add-on</string>
+    <string name="daftarakun">Register New Account</string>
+    <string name="namalaundry">Laundry Name</string>
+    <string name="confirmation">Confirm Password</string>
+    <string name="daftar">Register</string>
+    <string name="sudahpunyaakun">Already have account? Log in here</string>
+    <string name="tambahcabanglayout">Add Branch</string>
+    <string name="namacabang">Branch Name</string>
+    <string name="durasi">Duration</string>
+    <string name="namalayanantambah">Service Name</string>
+    <string name="gender">Gender</string>
+    <string name="pria">Male</string>
+    <string name="wanita">Female</string>
+    <string name="detailcabang">Branch Detail</string>
+    <string name="card_cabang">ID Branch</string>
+    <string name="kontak">Contact</string>
+    <string name="sunting">Edit</string>
+    <string name="hapus">Delete</string>
+    <string name="detaillayanantambahan">Add-on Detail</string>
+    <string name="detailpegawai">Employee Detail</string>
+    <string name="pilihmetodepembayaran">Choose Payment Method</string>
+    <string name="dp">Down Payment</string>
+    <string name="gunakanuangtunai">Use cash for payment</string>
+    <string name="tunai">Cash</string>
+    <string name="pembayaranelektronik">Electronic Payment</string>
+    <string name="belumbayar">Unpaid</string>
+    <string name="sudahbayar">Paid</string>
+    <string name="selesai">Finished</string>
+    <string name="opsimenu">Menu Option</string>
+    <string name="estimasi">Today Estimation</string>
+    <string name="kamiselalu">choose menu option you want</string>
+    <string name="konfirmasipengambilan">Pickup Confirmation</string>
+    <string name="konfirmasi">Confirmation</string>
+    <string name="apakahpelanggan">"Has the customer picked up his laundry? "</string>
+    <string name="apakahyakin">Are you sure the customer has made the payment?</string>
+    <string name="konfirmasipembayaran">Payment Confirmation</string>
+    <string name="detailtransaksi">Transaction Detail</string>
+    <string name="detailpembayaran">Payment Detail</string>
+    <string name="catatan">Note</string>
+    <!-- Activity Titles -->
+    <string name="title_laporan_transaksi">Transaction Report</string>
+
+    <!-- Filter Buttons -->
+    <string name="filter_belum_bayar">Unpaid</string>
+    <string name="filter_sudah_bayar">Paid</string>
+    <string name="filter_selesai">Completed</string>
+
+    <!-- Payment Status -->
+    <string name="status_dp">Down Payment</string>
+    <string name="status_lunas">Paid in Full</string>
+
+    <!-- Order Status -->
+    <string name="status_pesanan_selesai">Completed</string>
+    <string name="status_pesanan_proses">In Progress</string>
+
+    <!-- Dialog Titles -->
+    <string name="dialog_title_konfirmasi_pembayaran">Payment Confirmation</string>
+    <string name="dialog_title_konfirmasi_pengambilan">Pickup Confirmation</string>
+    <string name="dialog_title_detail_transaksi">Transaction Details</string>
+
+    <!-- Dialog Messages -->
+    <string name="dialog_message_konfirmasi_pembayaran">Are you sure the customer has made the payment?</string>
+    <string name="dialog_message_konfirmasi_pengambilan">Has the customer picked up their laundry?</string>
+
+    <!-- Dialog Labels -->
+    <string name="label_nama_pelanggan">Customer Name</string>
+    <string name="label_tanggal_transaksi">Transaction Date</string>
+    <string name="label_status_pembayaran">Payment Status</string>
+    <string name="label_layanan">Service</string>
+    <string name="label_harga_layanan">Service Price</string>
+    <string name="label_layanan_tambahan">Additional Services</string>
+    <string name="label_subtotal_tambahan">Additional Subtotal</string>
+    <string name="label_total_bayar">Total Amount</string>
+    <string name="label_metode_pembayaran">Payment Method</string>
+    <string name="label_catatan">Notes</string>
+    <string name="label_tanggal_pelunasan">Payment Date</string>
+    <string name="label_tanggal_selesai">Completion Date</string>
+
+    <!-- Button Text -->
+    <string name="btn_batal">Cancel</string>
+    <string name="btn_konfirmasi">Confirm</string>
+    <string name="btn_tutup">Close</string>
+    <string name="btn_bayar">PAY</string>
+    <string name="btn_ambil">PICKUP</string>
+    <string name="btn_refresh">Refresh</string>
+
+    <!-- Empty State Messages -->
+    <string name="empty_state_belum_bayar">No unpaid transactions yet</string>
+    <string name="empty_state_sudah_bayar">No paid transactions yet</string>
+    <string name="empty_state_selesai">No completed transactions yet</string>
+    <string name="empty_state_default">No transactions yet</string>
+
+    <!-- Toast Messages -->
+    <string name="toast_user_tidak_terautentikasi">User not authenticated</string>
+    <string name="toast_status_pembayaran_berhasil_diubah">Payment status successfully changed to Paid</string>
+    <string name="toast_status_transaksi_berhasil_diubah">Transaction status successfully changed to Completed</string>
+    <string name="toast_status_berhasil_diupdate">Status successfully updated to %1$s</string>
+    <string name="toast_gagal_update_status">Failed to update status: %1$s</string>
+    <string name="toast_error_memuat_data">Error loading data: %1$s</string>
+
+    <!-- Default Values -->
+    <string name="default_nama_tidak_tersedia">Name not available</string>
+    <string name="default_layanan_tidak_tersedia">Service not available</string>
+    <string name="default_metode_belum_ditentukan">Not determined</string>
+    <string name="default_tanggal_tidak_tersedia">Date not available</string>
+    <string name="default_tanggal_tidak_valid">Invalid date</string>
+
+    <!-- Timeline Labels -->
+    <string name="timeline_transaksi_dibuat">Transaction Created</string>
+    <string name="timeline_pembayaran_lunas">Payment Completed</string>
+    <string name="timeline_transaksi_selesai">Transaction Completed</string>
+
+    <!-- Content Descriptions -->
+    <string name="cd_back_button">Back Button</string>
+    <string name="cd_refresh_button">Refresh Button</string>
+    <string name="cd_close_dialog">Close Dialog</string>
+
+    <!-- Loading Messages -->
+    <string name="loading_data">Loading data...</string>
+
+    <!-- Error Messages -->
+    <string name="error_parsing_transaksi">Error parsing transaction</string>
+    <string name="error_loading_transaksi">Error loading transaction</string>
+
+    <!-- Day Names in English -->
+    <string name="senin">Monday</string>
+    <string name="selasa">Tuesday</string>
+    <string name="rabu">Wednesday</string>
+    <string name="kamis">Thursday</string>
+    <string name="jumat">Friday</string>
+    <string name="sabtu">Saturday</string>
+    <string name="minggu">Sunday</string>
+
+    <!-- Month Names in English -->
+    <string name="januari">January</string>
+    <string name="februari">February</string>
+    <string name="maret">March</string>
+    <string name="april">April</string>
+    <string name="mei">May</string>
+    <string name="juni">June</string>
+    <string name="juli">July</string>
+    <string name="agustus">August</string>
+    <string name="september">September</string>
+    <string name="oktober">October</string>
+    <string name="november">November</string>
+    <string name="desember">December</string>
+
+    <string name="btn_diambil">Picked Up</string>
+    <string name="text_dibayar">Paid</string>
+    <string name="text_diambil">Picked Up</string>
+
+    <string name="receipt_header_border">================================</string>
+    <string name="receipt_section_border">--------------------------------</string>
+    <string name="receipt_total_border">================================</string>
+
+    <!-- Receipt Header -->
+    <string name="receipt_invoice">Invoice: %s</string>
+    <string name="receipt_date">Date: %s</string>
+    <string name="receipt_cashier">Cashier: %s</string>
+    <string name="receipt_branch">Branch : %s</string>
+
+    <!-- Customer Info -->
+    <string name="receipt_customer">CUSTOMER: %s</string>
+    <string name="receipt_payment">PAYMENT: %s</string>
+
+    <!-- Services -->
+    <string name="receipt_main_service">MAIN SERVICE:</string>
+    <string name="receipt_additional_service">ADDITIONAL SERVICE:</string>
+
+    <!-- Totals -->
+    <string name="receipt_main_service_total">Main Service:</string>
+    <string name="receipt_additional_service_total">Additional Service:</string>
+    <string name="receipt_total_payment">TOTAL PAYMENT:</string>
+
+    <!-- Footer -->
+    <string name="receipt_thank_you">  Thank you for trusting\n      %s with your laundry!</string>
+    <string name="receipt_quality_service">  Quality Service,\n   Affordable Price</string>
+    <string name="receipt_contact">     WA: 0812-xxxx-xxxx</string>
+    <string name="receipt_valid_proof">This receipt is valid proof of\npayment. Keep receipt for\nwarranty claims.</string>
+
+    <!-- WhatsApp Message Strings -->
+    <string name="wa_greeting">Hello *%s* 👋</string>
+    <string name="wa_order_detail">Here are your laundry order details:</string>
+    <string name="wa_transaction_detail">📋 *TRANSACTION DETAILS*</string>
+    <string name="wa_invoice">• Invoice: %s</string>
+    <string name="wa_date">• Date: %s</string>
+    <string name="wa_officer">• Staff: %s</string>
+    <string name="wa_branch">• Branch: %s</string>
+    <string name="wa_payment">• Payment: %s</string>
+
+    <string name="wa_selected_service">🧽 *SELECTED SERVICES*</string>
+    <string name="wa_main_service">• Main Service: %s</string>
+    <string name="wa_price">• Price: %s</string>
+
+    <string name="wa_additional_service">➕ *ADDITIONAL SERVICES*</string>
+    <string name="wa_price_label">   Price: %s</string>
+    <string name="wa_additional_subtotal">Additional Subtotal: %s</string>
+
+    <string name="wa_total_payment">💰 *TOTAL PAYMENT*</string>
+    <string name="wa_store_address">📍 *STORE ADDRESS*</string>
+    <string name="wa_contact">📱 *CONTACT*</string>
+    <string name="wa_whatsapp">WhatsApp: 0812-xxxx-xxxx</string>
+
+    <string name="wa_thank_you">✨ *Thank you for trusting our services!*</string>
+    <string name="wa_commitment">We are committed to providing quality services at affordable prices.</string>
+
+    <string name="wa_important_info">🔄 *Important Information:*</string>
+    <string name="wa_keep_receipt">- Keep receipt as proof of payment</string>
+    <string name="wa_warranty_claim">- For warranty claims, please show this receipt</string>
+    <string name="wa_contact_us">- Contact us if you have any questions</string>
+
+    <string name="wa_warm_regards">Best regards,</string>
+    <string name="wa_team">*%s Team* 🧺💙</string>
+
+    <!-- Toast Messages -->
+    <string name="toast_connecting_printer">Connecting to printer...</string>
+    <string name="toast_print_success">✅ Receipt printed successfully!</string>
+    <string name="toast_bluetooth_not_supported">This device does not support Bluetooth</string>
+    <string name="toast_requesting_bluetooth">Requesting Bluetooth permission...</string>
+    <string name="toast_enabling_bluetooth">Enabling Bluetooth...</string>
+    <string name="toast_bluetooth_permission_granted">✅ Bluetooth permission granted successfully</string>
+    <string name="toast_bluetooth_permission_needed">⚠️ Bluetooth permission is required for printing</string>
+    <string name="toast_bluetooth_enabled">✅ Bluetooth enabled successfully</string>
+    <string name="toast_bluetooth_needed_for_print">❌ Bluetooth needs to be enabled for printing</string>
+
+    <!-- Error Messages -->
+    <string name="error_printer_not_found">Printer with MAC address %s not found.\nMake sure the printer is paired with this device.</string>
+    <string name="error_connection_refused">❌ Connection to printer refused.\nMake sure the printer is on and ready to accept connections.</string>
+    <string name="error_device_not_found">❌ Printer not found.\nMake sure the printer is paired with this device.</string>
+    <string name="error_permission_denied">❌ Bluetooth permission denied.\nPlease grant Bluetooth permission in app settings.</string>
+    <string name="error_connection_timeout">❌ Connection timeout.\nMake sure printer is in range and not being used by another device.</string>
+    <string name="error_print_failed">❌ Print failed: %s\n\nSolutions:\n• Make sure printer is on\n• Check Bluetooth connection\n• Try restarting the app</string>
+    <string name="error_unknown">Unknown error</string>
+
+    <string name="branch_name">Branch Name</string>
+    <string name="branch_address">Address</string>
+    <string name="branch_contact">Phone Number</string>
+    <string name="edit_branch">Edit Branch</string>
+    <string name="add_branch">Add Branch</string>
+
+    <!-- Buttons -->
+    <string name="contact_button">Contact</string>
+    <string name="view_button">View</string>
+    <string name="edit_button">Edit</string>
+    <string name="delete_button">Delete</string>
+    <string name="yes_button">Yes</string>
+    <string name="no_button">No</string>
+
+    <!-- Dialog messages -->
+    <string name="delete_confirmation_title">Delete Confirmation</string>
+    <string name="delete_confirmation_message">Are you sure you want to delete branch %s?</string>
+
+    <!-- Toast messages -->
+    <string name="whatsapp_not_installed">WhatsApp is not installed</string>
+    <string name="invalid_contact_number">Invalid contact number</string>
+    <string name="branch_deleted_success">Branch data successfully deleted</string>
+    <string name="branch_delete_failed">Failed to delete branch data</string>
+
+    <!-- WhatsApp message template -->
+    <string name="whatsapp_message_template">Hello, I would like to ask about laundry services at %s</string>
+
+    <string name="nama_tidak_tersedia">Name not available</string>
+    <string name="harga_format">$%s</string>
+    <string name="durasi_format">%s days</string>
+
+    <!-- Dialog -->
+    <string name="hapus_layanan">Delete Service</string>
+    <string name="konfirmasi_hapus_layanan">Are you sure you want to delete service \"%s\"?</string>
+    <string name="ya">Yes</string>
+    <string name="tidak">No</string>
+
+    <!-- Toast Messages -->
+    <string name="error_dialog">Error showing dialog: %s</string>
+    <string name="layanan_berhasil_dihapus">Service successfully deleted</string>
+    <string name="gagal_menghapus_layanan">Failed to delete service: %s</string>
+    <string name="id_layanan_tidak_valid">Invalid Service ID</string>
+
+    <!-- Intent Extra Keys -->
+    <string name="extra_id">id</string>
+    <string name="extra_nama">nama</string>
+    <string name="extra_harga">harga</string>
+    <string name="extra_durasi">durasi</string>
+    <string name="extra_mode">mode</string>
+    <string name="mode_edit">edit</string>
+
+    <string name="edit_pegawai">Edit Employee</string>
+    <string name="tambah_pegawai">Add Employee</string>
+    <string name="id_pegawai">Employee ID</string>
+    <string name="jenis_kelamin">Gender</string>
+
+    <string name="edit">Edit</string>
+
+    <!-- Messages -->
+    <string name="data_pegawai_berhasil_dihapus">Employee data successfully deleted</string>
+    <string name="gagal_menghapus_data_pegawai">Failed to delete employee data</string>
+
+    <string name="konfirmasi_hapus">Delete Confirmation</string>
+    <string name="yakin_hapus_pegawai">Are you sure you want to delete this employee data?</string>
+
+    <string name="dialog_confirm_delete_title">Delete Confirmation</string>
+    <string name="dialog_confirm_delete_message">Are you sure you want to delete this customer data?</string>
+    <string name="dialog_yes">Yes</string>
+    <string name="dialog_no">No</string>
+
+    <!-- Toast Messages -->
+    <string name="toast_delete_success">Data successfully deleted</string>
+    <string name="toast_delete_failed">Failed to delete data: %1$s</string>
+
+    <!-- Labels -->
+    <string name="label_customer_id">Customer ID</string>
+    <string name="label_customer_name">Customer Name</string>
+    <string name="label_customer_address">Customer Address</string>
+    <string name="label_phone_number">Phone Number</string>
+    <string name="label_branch">Branch</string>
+
+    <!-- Buttons -->
+    <string name="button_edit">Edit</string>
+    <string name="button_delete">Delete</string>
+    <string name="button_contact">Contact</string>
+    <string name="button_view">View</string>
+
+
+    <!-- Additional Services -->
+    <string name="id_tidak_tersedia">ID Not Available</string>
+    <string name="nama_layanan_tidak_tersedia">Service Name Not Available</string>
+    <string name="harga_tidak_tersedia">Price Not Available</string>
+
+    <string name="konfirmasi_hapus_message">Are you sure you want to delete additional service \'%1$s\'?</string>
+
+    <string name="berhasil_menghapus_data">Successfully deleted additional service data</string>
+    <string name="gagal_menghapus_data">Failed to delete data: %1$s</string>
+
+    <string name="layanan_tidak_tersedia">Service not available</string>
+    <string name="harga_label">Price : %s</string>
+    <string name="terjadi_kesalahan">An error occurred</string>
+
+    <string name="pilih_layanan">Select Service</string>
+    <string name="loading">Loading...</string>
+    <string name="tidak_ada_data">No data available</string>
+
+    <!-- Adapter Pilih Layanan Tambahan -->
+    <string name="layanan_tambahan">Additional Service</string>
+    <string name="ok">OK</string>
+
+    <string name="alamat_tidak_tersedia">Address not available</string>
+    <string name="nohp_tidak_tersedia">Phone number not available</string>
+
+    <string name="account_title">Account</string>
+    <string name="email_not_available">Email not available</string>
+    <string name="username_not_available">Username not available</string>
+    <string name="error_loading_username">Error loading username</string>
+    <string name="failed_load_username">Failed to load username: %1$s</string>
+    <string name="logout_success">Successfully logged out</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="settings">Settings</string>
+    <string name="edit_profile_coming_soon">Edit Profile feature coming soon</string>
+    <string name="settings_coming_soon">Settings feature coming soon</string>
+
+    <!-- Common Strings -->
+    <string name="back">Back</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+
 </resources>

@@ -4,85 +4,95 @@
     android:id="@+id/cvCARD_PILIH_PELANGGAN"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    style="@style/BackgroundCard">
+    style="@style/BackgroundCard"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="14dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         app:cardCornerRadius="12dp"
         app:cardElevation="4dp"
         style="@style/widgetcard">
 
         <RelativeLayout
-            style="@style/widgetcard"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:padding="16dp">
 
-            <TextView
-                android:id="@+id/tvID_PELANGGAN"
-                style="@style/header"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/poppins_semibold"
-                android:padding="8dp"
-                android:text="@string/card_pelanggan_id"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp"
-                tools:ignore="TextContrastCheck" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewProfile"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                android:backgroundTint="@color/bg_icon"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"> <ImageView
+                android:id="@+id/ivProfilPelanggan"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center"
+                android:src="@drawable/profilpria"
+                android:scaleType="centerCrop"/>
+            </androidx.cardview.widget.CardView>
 
             <LinearLayout
+                android:id="@+id/linearLayoutData"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tvID_PELANGGAN"
-                android:layout_marginTop="1dp"
                 android:orientation="vertical"
-                android:padding="8dp">
+                android:layout_toEndOf="@id/cardViewProfile"
+                android:layout_toStartOf="@+id/linearLayoutButtons"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="8dp"
+                android:layout_centerVertical="true">
 
+                <TextView
+                    android:id="@+id/tvID_PELANGGAN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="ID_TERSEMBUNYI"
+                    tools:ignore="HardcodedText" />
                 <TextView
                     android:id="@+id/tvNAMA_PELANGGAN"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/nama_pelanggan"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/nunito_bold"
                     android:paddingStart="4dp"
                     android:paddingEnd="4dp"
-                    android:text="@string/nama_pelanggan"
-                    android:textSize="18sp" />
+                    android:textColor="@color/text_primary"
+                    android:layout_marginTop="4dp"
+                    android:lineSpacingMultiplier="0.8"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
+                    android:gravity="center_vertical"
                     android:paddingStart="4dp"
                     android:paddingEnd="4dp">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.4"
-                        android:fontFamily="@font/poppins_medium"
-                        android:text="@string/alamat_pelanggan" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.1"
-                        android:fontFamily="@font/poppins_medium"
-                        android:text=":" />
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:background="@drawable/baseline_location_on_24"/>
 
                     <TextView
                         android:id="@+id/tvALAMAT_PELANGGAN"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1.5"
-                        android:fontFamily="@font/poppins"
+                        android:layout_weight="1.3"
+                        android:fontFamily="@font/nunito"
                         android:text="@string/alamat_pelanggan"
-                        android:textSize="14sp" />
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="4dp"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -90,31 +100,24 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:paddingStart="4dp"
-                    android:paddingEnd="4dp">
+                    android:paddingEnd="4dp"
+                    android:gravity="center_vertical">
 
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.4"
-                        android:fontFamily="@font/poppins_medium"
-                        android:text="@string/no_hp" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.1"
-                        android:fontFamily="@font/poppins_medium"
-                        android:text=":" />
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:background="@drawable/baseline_phone_24"/>
 
                     <TextView
                         android:id="@+id/tvNO_HP"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1.5"
-                        android:fontFamily="@font/poppins"
+                        android:layout_weight="1.3"
+                        android:fontFamily="@font/nunito"
                         android:text="@string/no_hp"
-                        android:textSize="14sp" />
-
+                        android:textSize="14sp"
+                        android:textColor="@color/text_secondary"
+                        android:layout_marginLeft="4dp"/>
                 </LinearLayout>
             </LinearLayout>
         </RelativeLayout>

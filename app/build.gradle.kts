@@ -37,7 +37,8 @@ android {
 }
 
 dependencies {
-
+    implementation(platform(libs.firebase.bom)) // Selalu gunakan BOM untuk Firebase
+    implementation(libs.firebase.auth)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

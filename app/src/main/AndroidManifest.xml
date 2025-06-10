@@ -2,63 +2,158 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Permissions untuk Bluetooth (Android 12+) -->
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+
+    <!-- Permissions untuk Bluetooth (Android < 12) -->
+    <uses-permission android:name="android.permission.BLUETOOTH"
+        android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"
+        android:maxSdkVersion="30" />
+
+    <!-- Location permission diperlukan untuk Bluetooth scan di Android < 12 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"
+        android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"
+        android:maxSdkVersion="30" />
+
+    <!-- Internet permission -->
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Features yang diperlukan -->
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="false" />
 
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/mesincuci"
-        android:label="@string/app_name"
-        android:roundIcon="@drawable/mesincuci"
+        android:icon="@drawable/logoapp1"
+        android:label="CuciYuk!"
+        android:roundIcon="@drawable/logoapp1"
         android:supportsRtl="true"
         android:theme="@style/Theme.LaundryApp"
         tools:targetApi="31">
+
+        <!-- Activity untuk Cabang -->
         <activity
-            android:name=".transaksi.Activity_pilih_layanan_tambahan"
-            android:exported="false" />
+            android:name=".cabang.TambahCabangActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".transaksi.activity_pilih_layanan"
-            android:exported="false" />
+            android:name=".cabang.DataCabangActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- Activity untuk Akun -->
         <activity
-            android:name=".transaksi.activity_pilih_pelanggan"
-            android:exported="false" />
+            android:name=".AkunActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- Activity untuk Authentication -->
         <activity
-            android:name=".transaksi.transaksi"
-            android:exported="false" />
+            android:name=".Auth.RegisterActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity_Data_laporan"
-            android:exported="false" />
-        <activity
-            android:name=".layanan.TambahLayananActivity"
-            android:exported="false" />
-        <activity
-            android:name=".layanan.DataLayananActivity"
-            android:exported="false" />
-        <activity
-            android:name=".pegawai.TambahPegawaiActivity"
-            android:exported="false" />
-        <activity
-            android:name=".pegawai.Activity_data_pegawai"
-            android:exported="false" />
-        <activity
-            android:name=".pelanggan.TambahPelangganActivity"
-            android:exported="false" />
-        <activity
-            android:name=".pelanggan.DataPelangganActivity"
-            android:exported="false" />
-        <activity
-            android:name=".HomeActivity"
-            android:exported="true">
+            android:name=".Auth.LoginActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Activity untuk Transaksi -->
+        <activity
+            android:name=".transaksi.InvoiceTransaksiActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".transaksi.KonfirmasiDataTransaksi"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".transaksi.Activity_pilih_layanan_tambahan"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".transaksi.activity_pilih_layanan"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".transaksi.activity_pilih_pelanggan"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".transaksi.transaksi"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- Activity untuk Tambahan -->
+        <activity
+            android:name=".tambahan.DataTambahanActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".tambahan.TambahTambahanActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- Activity untuk Laporan -->
+        <activity
+            android:name=".Activity_Data_laporan"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- Activity untuk Layanan -->
+        <activity
+            android:name=".layanan.TambahLayananActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".layanan.DataLayananActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- Activity untuk Pegawai -->
+        <activity
+            android:name=".pegawai.TambahPegawaiActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pegawai.Activity_data_pegawai"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- Activity untuk Pelanggan -->
+        <activity
+            android:name=".pelanggan.TambahPelangganActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pelanggan.DataPelangganActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- Activity Utama -->
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
 
         <meta-data
             android:name="preloaded_fonts"
@@ -66,3 +161,4 @@
     </application>
 
 </manifest>
+

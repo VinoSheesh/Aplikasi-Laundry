@@ -1,9 +1,11 @@
 package com.tugasss.laundryapp.transaksi
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -60,6 +62,12 @@ class activity_pilih_pelanggan : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        val back = findViewById<ImageView>(R.id.Back)
+        back.setOnClickListener{
+            val intent = Intent(this, transaksi::class.java)
+            startActivity(intent)
         }
     }
 

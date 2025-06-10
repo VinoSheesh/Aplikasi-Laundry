@@ -4,88 +4,91 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    style="@style/BackgroundCard"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    style="@style/widgetcard"
     android:id="@+id/cvCARD_PILIH_LAYANAN">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="14dp"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="4dp"
-        style="@style/widgetcard">
-
         <RelativeLayout
-            style="@style/widgetcard"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewProfile"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                android:backgroundTint="@color/bg_icon"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true">
 
-            <TextView
-                android:id="@+id/tvID_LAYANAN"
-                style="@style/header"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/poppins_semibold"
-                android:padding="8dp"
-                android:text="@string/card_layanan"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp"
-                tools:ignore="TextContrastCheck"/>
+                <ImageView
+                    android:id="@+id/ivProfilPegawai"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/iconcuci"
+                    android:scaleType="centerCrop"/>
+            </androidx.cardview.widget.CardView>
 
             <LinearLayout
-                android:layout_below="@id/tvID_LAYANAN"
+                android:id="@+id/linearLayoutData"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingStart="8dp"
-                android:paddingEnd="8dp">
+                android:layout_toEndOf="@id/cardViewProfile"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="8dp"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/tvID_LAYANAN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="ID_TERSEMBUNYI"
+                    tools:ignore="HardcodedText" />
 
                 <TextView
                     android:id="@+id/tvNAMA_LAYANAN"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:text="@string/nama_layanan"
                     android:textSize="18sp"
-                    android:fontFamily="@font/poppins_bold"
+                    android:fontFamily="@font/nunito_bold"
                     android:paddingStart="4dp"
                     android:paddingEnd="4dp"
-                    android:layout_marginTop="4dp" />
+                    android:textColor="@color/text_primary"
+                    android:layout_marginTop="4dp"
+                    android:lineSpacingMultiplier="0.8"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
+                    android:gravity="center_vertical"
                     android:paddingStart="4dp"
                     android:paddingEnd="4dp">
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:text="@string/harga_layanan"
-                        android:layout_weight="0.4"
-                        android:fontFamily="@font/poppins_medium"/>
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:text=":"
-                        android:layout_weight="0.1"
-                        android:fontFamily="@font/poppins_medium"/>
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:background="@drawable/baseline_attach_money_24"/>
+
                     <TextView
                         android:id="@+id/tvHARGA_LAYANAN"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1.5"
-                        android:fontFamily="@font/poppins"
+                        android:layout_weight="1.3"
+                        android:fontFamily="@font/nunito"
                         android:text="@string/harga_layanan"
-                        android:textSize="14sp"/>
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="4dp"/>
                 </LinearLayout>
 
             </LinearLayout>
-
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
-
-</androidx.cardview.widget.CardView>

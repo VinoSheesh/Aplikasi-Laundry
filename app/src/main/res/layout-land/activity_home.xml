@@ -33,9 +33,25 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/greetingTextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.97"
+        app:layout_constraintHorizontal_bias="0.835"
         app:layout_constraintStart_toEndOf="@+id/greetingTextView"
-        app:layout_constraintTop_toTopOf="@+id/greetingTextView" />
+        app:layout_constraintTop_toTopOf="@+id/greetingTextView"
+        app:layout_constraintVertical_bias="0.47" />
+
+    <Switch
+        android:id="@+id/languageSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:minHeight="48dp"
+        android:showText="true"
+        android:switchMinWidth="56dp"
+        android:textOff="ID"
+        android:textOn="EN"
+        android:thumb="@drawable/language_switch_thumb"
+        android:track="@drawable/language_switch_track"
+        app:layout_constraintStart_toEndOf="@+id/dateTextView"
+        tools:layout_editor_absoluteY="1dp" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -74,7 +90,7 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/poppins_semibold"
                     android:gravity="center"
-                    android:text="Estimasi"
+                    android:text="@string/estimasi"
                     android:textAlignment="textStart"
                     android:textSize="16sp" />
 
@@ -111,6 +127,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/view">
 
                 <LinearLayout
+                    android:id="@+id/AKUN"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -129,7 +146,7 @@
                         android:layout_gravity="center"
                         android:layout_marginStart="22dp"
                         android:fontFamily="@font/poppins_medium"
-                        android:text="Akun" />
+                        android:text="@string/akun" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -152,11 +169,12 @@
                         android:layout_gravity="center"
                         android:layout_marginStart="22dp"
                         android:fontFamily="@font/poppins_medium"
-                        android:text="Pegawai" />
+                        android:text="@string/pegawai" />
 
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/CABANG"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -175,7 +193,7 @@
                         android:layout_gravity="center"
                         android:layout_marginStart="22dp"
                         android:fontFamily="@font/poppins_medium"
-                        android:text="Cabang" />
+                        android:text="@string/cabang" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -230,7 +248,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_medium"
-                        android:text="Transaksi" />
+                        android:text="@string/transaksi" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -263,7 +281,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_medium"
-                        android:text="Layanan" />
+                        android:text="@string/layanan" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
@@ -290,6 +308,7 @@
                 app:cardElevation="4dp">
 
                 <LinearLayout
+                    android:id="@+id/TAMBAHAN"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -307,7 +326,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_medium"
-                        android:text="Tambahan" />
+                        android:text="@string/tambahan" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -340,7 +359,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_medium"
-                        android:text="Pelanggan" />
+                        android:text="@string/pelanggan" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
@@ -366,6 +385,7 @@
                 app:cardElevation="4dp">
 
                 <LinearLayout
+                    android:id="@+id/LAPORAN"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -383,7 +403,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins_medium"
-                        android:text="Laporan" />
+                        android:text="@string/laporan" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 

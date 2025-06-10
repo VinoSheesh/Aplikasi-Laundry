@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import android.widget.ImageView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.tugasss.laundryapp.R
@@ -36,8 +37,15 @@ class AdapterDataPegawai(
         holder.tvNoHP.text = item.noHPPegawai
         holder.tvCabang.text = item.idCabang
 
-        holder.btHubungi.setOnClickListener {
+        // Set gambar profil berdasarkan jenis kelamin
+        when (item.jenisKelamin?.lowercase()) {
+            "wanita", "female" -> holder.ivProfil.setImageResource(R.drawable.profilwanita)
+            "pria", "male" -> holder.ivProfil.setImageResource(R.drawable.profilpria)
+            else -> holder.ivProfil.setImageResource(R.drawable.profilpria) // default pria
+        }
 
+        holder.btHubungi.setOnClickListener {
+            // Implementasi hubungi bisa ditambahkan di sini
         }
 
         holder.btLihat.setOnClickListener {
@@ -59,41 +67,67 @@ class AdapterDataPegawai(
             val btEdit = dialogView.findViewById<Button>(R.id.btDIALOG_MOD_PEGAWAI_Edit)
             val btHapus = dialogView.findViewById<Button>(R.id.btDIALOG_MOD_PEGAWAI_Hapus)
 
+            // Set text dengan data
             tvIdPegawai.text = item.idPegawai
             tvNamaPegawai.text = item.namaPegawai
             tvAlamatPegawai.text = item.alamatPegawai
             tvNoHPPegawai.text = item.noHPPegawai
             tvCabangPegawai.text = item.idCabang
 
+            // Set text button dengan string resource
+            btEdit.text = appContext.getString(R.string.edit)
+            btHapus.text = appContext.getString(R.string.hapus)
+
             btEdit.setOnClickListener {
                 val intent = Intent(appContext, TambahPegawaiActivity::class.java)
-                intent.putExtra("Judul", "Edit Pegawai")
+                intent.putExtra("Judul", appContext.getString(R.string.edit_pegawai))
                 intent.putExtra("idPegawai", item.idPegawai)
                 intent.putExtra("namaPegawai", item.namaPegawai)
                 intent.putExtra("noHPPegawai", item.noHPPegawai)
                 intent.putExtra("alamatPegawai", item.alamatPegawai)
                 intent.putExtra("idCabang", item.idCabang)
+                intent.putExtra("jeniskelamin", item.jenisKelamin)
                 appContext.startActivity(intent)
                 alertDialog.dismiss()
             }
 
             btHapus.setOnClickListener {
-                val position = holder.adapterPosition
-                if (position != RecyclerView.NO_POSITION) {
-                    val idPegawai = listPegawai[position].idPegawai
+                // Tambah konfirmasi dialog sebelum menghapus
+                val confirmDialog = AlertDialog.Builder(holder.itemView.context)
+                    .setTitle(appContext.getString(R.string.konfirmasi_hapus))
+                    .setMessage(appContext.getString(R.string.yakin_hapus_pegawai))
+                    .setPositiveButton(appContext.getString(R.string.ya)) { _, _ ->
+                        val position = holder.adapterPosition
+                        if (position != RecyclerView.NO_POSITION) {
+                            val idPegawai = listPegawai[position].idPegawai
 
-                    val database = com.google.firebase.database.FirebaseDatabase.getInstance()
-                    val pegawaiRef = database.getReference("Pegawai").child(idPegawai ?: "")
+                            val database = com.google.firebase.database.FirebaseDatabase.getInstance()
+                            val pegawaiRef = database.getReference("pegawai").child(idPegawai ?: "")
 
-                    pegawaiRef.removeValue().addOnSuccessListener {
-                        listPegawai.removeAt(position)
-                        notifyItemRemoved(position)
-                        Toast.makeText(holder.itemView.context, "Data pegawai berhasil dihapus", Toast.LENGTH_SHORT).show()
-                        alertDialog.dismiss()
-                    }.addOnFailureListener {
-                        Toast.makeText(holder.itemView.context, "Gagal menghapus data pegawai", Toast.LENGTH_SHORT).show()
+                            pegawaiRef.removeValue().addOnSuccessListener {
+                                listPegawai.removeAt(position)
+                                notifyItemRemoved(position)
+                                Toast.makeText(
+                                    holder.itemView.context,
+                                    appContext.getString(R.string.data_pegawai_berhasil_dihapus),
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                                alertDialog.dismiss()
+                            }.addOnFailureListener {
+                                Toast.makeText(
+                                    holder.itemView.context,
+                                    appContext.getString(R.string.gagal_menghapus_data_pegawai),
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            }
+                        }
                     }
-                }
+                    .setNegativeButton(appContext.getString(R.string.tidak)) { dialog, _ ->
+                        dialog.dismiss()
+                    }
+                    .create()
+
+                confirmDialog.show()
             }
 
             alertDialog.show()
@@ -101,12 +135,13 @@ class AdapterDataPegawai(
 
         holder.cvCARD.setOnClickListener {
             val intent = Intent(appContext, TambahPegawaiActivity::class.java)
-            intent.putExtra("Judul", "Edit Pegawai")
+            intent.putExtra("Judul", appContext.getString(R.string.edit_pegawai))
             intent.putExtra("idPegawai", item.idPegawai)
             intent.putExtra("namaPegawai", item.namaPegawai)
             intent.putExtra("noHPPegawai", item.noHPPegawai)
             intent.putExtra("alamatPegawai", item.alamatPegawai)
             intent.putExtra("idCabang", item.idCabang)
+            intent.putExtra("jeniskelamin", item.jenisKelamin)
             appContext.startActivity(intent)
         }
     }
@@ -122,7 +157,8 @@ class AdapterDataPegawai(
         val tvNoHP: TextView = itemView.findViewById(R.id.tvNO_HP)
         val tvCabang: TextView = itemView.findViewById(R.id.tvCABANG)
         val cvCARD: CardView = itemView.findViewById(R.id.cvCARD_PEGAWAI)
-        val btHubungi: Button = itemView.findViewById(R.id.btHUBUNGI)
-        val btLihat: Button = itemView.findViewById(R.id.btLIHAT)
+        val btHubungi: CardView = itemView.findViewById(R.id.btHUBUNGI)
+        val btLihat: CardView = itemView.findViewById(R.id.btLIHAT)
+        val ivProfil: ImageView = itemView.findViewById(R.id.ivProfilPegawai)
     }
 }
